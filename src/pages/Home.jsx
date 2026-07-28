@@ -24,13 +24,13 @@ export default function Home() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-tech-sky opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-tech-sky"></span>
             </span>
-            Systems Online // Innovation Powered
+            Systems Online // Enterprise Grade 2026
           </div>
 
           {/* Main Heading */}
           <h1 className="text-[clamp(2.5rem,6.5vw,5.5rem)] font-extrabold tracking-tight leading-[1.05] mb-8 text-white uppercase">
             Power Your <br />
-            <span className="bg-gradient-to-r from-tech-sky to-tech-indigo bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-tech-sky via-cyan-400 to-tech-indigo bg-clip-text text-transparent">
               Digital Future.
             </span>
           </h1>
@@ -40,23 +40,92 @@ export default function Home() {
 
           {/* Description Card */}
           <p className="max-w-[680px] mx-auto mb-12 text-sm md:text-[1.05rem] leading-relaxed text-gray-400 border border-white/5 p-6 bg-tech-gray/45 backdrop-blur-md rounded-2xl font-sans shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-            &gt; Orientis Digital provides the infrastructure, development, and strategies you need to scale, automate, and innovate in the modern digital landscape.
+            &gt; Orientis Digital provides high-performance enterprise products, cloud infrastructure, and custom engineering strategies to scale, automate, and innovate.
           </p>
 
           {/* CTA Actions */}
           <div className="flex gap-5 justify-center flex-wrap">
             <Link
-              to="/company/contact"
-              className="inline-block px-10 py-4 font-bold transition-all duration-200 text-sm md:text-base bg-gradient-to-r from-tech-blue to-tech-indigo text-white border-0 hover:shadow-tech hover:-translate-y-0.5 shadow-tech-sm uppercase tracking-wider rounded-md"
+              to="/products"
+              className="inline-block px-10 py-4 font-bold transition-all duration-200 text-sm md:text-base bg-gradient-to-r from-tech-blue to-tech-indigo text-white border-0 hover:shadow-tech hover:-translate-y-0.5 shadow-tech-sm uppercase tracking-wider rounded-xl"
             >
-              Start Your Project
+              Explore Products
             </Link>
             <Link
-              to="/platform"
-              className="inline-block px-10 py-4 font-bold transition-all duration-200 text-sm md:text-base bg-transparent text-white border border-white/10 hover:border-tech-blue hover:bg-tech-blue/10 uppercase tracking-wider rounded-md"
+              to="/solutions"
+              className="inline-block px-10 py-4 font-bold transition-all duration-200 text-sm md:text-base bg-transparent text-white border border-white/10 hover:border-tech-blue hover:bg-tech-blue/10 uppercase tracking-wider rounded-xl"
             >
               Our Solutions
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Products Preview */}
+      <section className="py-20 bg-tech-gray/30 border-t border-white/5 relative z-20">
+        <div className="container mx-auto px-[5%] max-w-[1280px]">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div>
+              <span className="text-tech-sky text-xs font-mono font-bold uppercase tracking-widest block mb-2">
+                // Product Ecosystem
+              </span>
+              <h2 className="text-3xl font-extrabold text-white uppercase">
+                Featured Software Suite
+              </h2>
+            </div>
+            <Link
+              to="/products"
+              className="text-xs font-bold text-tech-sky hover:text-white uppercase tracking-wider flex items-center gap-1.5"
+            >
+              View All Products <i className="fa-solid fa-arrow-right text-[10px]"></i>
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-tech-sky/40 transition-all group">
+              <div className="w-12 h-12 rounded-xl bg-tech-blue/10 border border-tech-blue/20 flex items-center justify-center text-tech-sky text-xl mb-4 group-hover:scale-110 transition-transform">
+                <i className="fa-solid fa-server"></i>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-tech-sky transition-colors">
+                Cloud Orchestrator
+              </h3>
+              <p className="text-xs text-gray-400 leading-relaxed mb-4">
+                Automated multi-cloud workload provisioning &amp; zero-downtime deployments.
+              </p>
+              <span className="text-[11px] font-mono text-tech-indigo uppercase font-semibold">
+                99.999% SLA Uptime
+              </span>
+            </div>
+
+            <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-tech-indigo/40 transition-all group">
+              <div className="w-12 h-12 rounded-xl bg-tech-indigo/10 border border-tech-indigo/20 flex items-center justify-center text-tech-indigo text-xl mb-4 group-hover:scale-110 transition-transform">
+                <i className="fa-solid fa-network-wired"></i>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-tech-indigo transition-colors">
+                Nexus API Gateway
+              </h3>
+              <p className="text-xs text-gray-400 leading-relaxed mb-4">
+                Sub-millisecond API proxy with adaptive DDoS protection and rate limiting.
+              </p>
+              <span className="text-[11px] font-mono text-tech-sky uppercase font-semibold">
+                &lt; 0.8ms Latency
+              </span>
+            </div>
+
+            <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-cyan-400/40 transition-all group">
+              <div className="w-12 h-12 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 text-xl mb-4 group-hover:scale-110 transition-transform">
+                <i className="fa-solid fa-shield-halved"></i>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                ShieldOps Cyber
+              </h3>
+              <p className="text-xs text-gray-400 leading-relaxed mb-4">
+                AI incident response, continuous audit scanning &amp; vulnerability patching.
+              </p>
+              <span className="text-[11px] font-mono text-cyan-400 uppercase font-semibold">
+                24/7 Threat Neutralization
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -65,8 +134,7 @@ export default function Home() {
       <section className="py-16 bg-tech-black border-t border-white/5 relative z-20">
         <div className="container mx-auto px-[5%] max-w-[1200px]">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Stat 1 */}
-            <div className="glass-panel p-6 rounded-2xl flex items-center gap-6 group hover:border-tech-blue/30 transition-all duration-300 fade-up">
+            <div className="glass-panel p-6 rounded-2xl flex items-center gap-6 group hover:border-tech-blue/30 transition-all duration-300">
               <div className="w-14 h-14 bg-tech-blue/10 border border-tech-blue/20 rounded-xl flex items-center justify-center text-tech-sky text-2xl group-hover:scale-110 transition-transform duration-300">
                 <i className="fa-solid fa-cloud-arrow-up"></i>
               </div>
@@ -79,8 +147,7 @@ export default function Home() {
                 </span>
               </div>
             </div>
-            {/* Stat 2 */}
-            <div className="glass-panel p-6 rounded-2xl flex items-center gap-6 group hover:border-tech-indigo/30 transition-all duration-300 fade-up">
+            <div className="glass-panel p-6 rounded-2xl flex items-center gap-6 group hover:border-tech-indigo/30 transition-all duration-300">
               <div className="w-14 h-14 bg-tech-indigo/10 border border-tech-indigo/20 rounded-xl flex items-center justify-center text-tech-indigo text-2xl group-hover:scale-110 transition-transform duration-300">
                 <i className="fa-solid fa-code-branch"></i>
               </div>
@@ -93,8 +160,7 @@ export default function Home() {
                 </span>
               </div>
             </div>
-            {/* Stat 3 */}
-            <div className="glass-panel p-6 rounded-2xl flex items-center gap-6 group hover:border-tech-blue/30 transition-all duration-300 fade-up">
+            <div className="glass-panel p-6 rounded-2xl flex items-center gap-6 group hover:border-tech-blue/30 transition-all duration-300">
               <div className="w-14 h-14 bg-tech-blue/10 border border-tech-blue/20 rounded-xl flex items-center justify-center text-tech-sky text-2xl group-hover:scale-110 transition-transform duration-300">
                 <i className="fa-solid fa-bolt"></i>
               </div>
@@ -111,103 +177,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Platform Overview Section */}
-      <section id="services" className="py-24 bg-tech-gray/30 border-t border-tech-blue/10">
-        <div className="container mx-auto px-[5%] max-w-[1400px]">
-          <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6 fade-up">
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-4 border-l-4 border-tech-blue pl-4">
-                Platform <br /> Overview
-              </h2>
-              <p className="text-[0.95rem] text-gray-400 max-w-[600px] leading-relaxed">
-                &gt; Our core technology services.
-              </p>
-            </div>
-            <div>
-              <Link
-                to="/platform"
-                className="inline-block px-8 py-3 text-sm font-bold transition-all duration-200 bg-transparent text-tech-blue border border-tech-blue hover:bg-tech-blue hover:text-white uppercase tracking-widest rounded-md"
-              >
-                [ View Full Services ]
-              </Link>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* 1. Custom Software */}
-            <Link
-              to="/solutions/custom-software"
-              className="glass-panel glass-panel-hover p-8 flex flex-col h-full relative group rounded-2xl fade-up"
-            >
-              <div className="text-3xl text-gray-400 mb-6 group-hover:text-tech-blue transition-colors">
-                <i className="fa-solid fa-code"></i>
-              </div>
-              <h3 className="text-xl font-bold mb-4 text-white group-hover:text-tech-blue transition-colors">
-                Custom Software
-              </h3>
-              <p className="text-xs leading-[1.5] text-gray-400 mb-4 font-sans">
-                Scalable, mobile-responsive applications built for performance.
-              </p>
-              <ul className="list-none text-left space-y-2 mt-auto">
-                <li className="text-xs text-gray-500">&gt; Web Applications</li>
-                <li className="text-xs text-gray-500">&gt; Mobile Development</li>
-                <li className="text-xs text-gray-500">&gt; API Integration</li>
-              </ul>
-            </Link>
-
-            {/* 2. Cloud Infrastructure */}
-            <Link
-              to="/solutions/cloud-ops"
-              className="glass-panel glass-panel-hover p-8 flex flex-col h-full relative group rounded-2xl fade-up"
-            >
-              <div className="text-3xl text-gray-400 mb-6 group-hover:text-tech-blue transition-colors">
-                <i className="fa-solid fa-cloud"></i>
-              </div>
-              <h3 className="text-xl font-bold mb-4 text-white group-hover:text-tech-blue transition-colors">
-                Cloud Ops
-              </h3>
-              <p className="text-xs leading-[1.5] text-gray-400 mb-4 font-sans">
-                Advanced DevOps and reliable cloud infrastructure management.
-              </p>
-              <ul className="list-none text-left space-y-2 mt-auto">
-                <li className="text-xs text-gray-500">&gt; AWS/Azure/GCP</li>
-                <li className="text-xs text-gray-500">&gt; CI/CD Pipelines</li>
-                <li className="text-xs text-gray-500">&gt; Managed Hosting</li>
-              </ul>
-            </Link>
-
-            {/* 3. Tech Consulting */}
-            <Link
-              to="/solutions/tech-consulting"
-              className="glass-panel glass-panel-hover p-8 flex flex-col h-full relative group rounded-2xl fade-up"
-            >
-              <div className="text-3xl text-gray-400 mb-6 group-hover:text-tech-blue transition-colors">
-                <i className="fa-solid fa-lightbulb"></i>
-              </div>
-              <h3 className="text-xl font-bold mb-4 text-white group-hover:text-tech-blue transition-colors">
-                Consulting
-              </h3>
-              <p className="text-xs leading-[1.5] text-gray-400 mb-4 font-sans">
-                Strategic guidance for digital transformation and scale.
-              </p>
-              <ul className="list-none text-left space-y-2 mt-auto">
-                <li className="text-xs text-gray-500">&gt; Strategy & Roadmap</li>
-                <li className="text-xs text-gray-500">&gt; Tech Stack Audit</li>
-                <li className="text-xs text-gray-500">&gt; Innovation Workshops</li>
-              </ul>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Tech Stack Section */}
       <section className="py-20 bg-tech-black/50 border-t border-white/5 relative overflow-hidden">
-        <div className="container mx-auto px-[5%] max-w-[1200px] fade-up">
+        <div className="container mx-auto px-[5%] max-w-[1200px]">
           <div className="text-center mb-12">
             <span className="text-tech-sky text-xs font-bold uppercase tracking-widest font-mono mb-2 block">
-              // Core Ecosystem
+              // Core Tech Stack
             </span>
-            <h2 className="text-3xl font-bold text-white uppercase">Technology Stack</h2>
+            <h2 className="text-3xl font-bold text-white uppercase">Ecosystem Architecture</h2>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
@@ -247,29 +224,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Quote Section */}
+      {/* Quote / Manifesto Section */}
       <section className="py-28 bg-tech-black relative overflow-hidden border-t border-tech-blue/10">
         <div className="absolute top-1/2 left-1/2 w-[800px] h-[400px] bg-tech-indigo/10 -translate-x-1/2 -translate-y-1/2 blur-[100px] -z-10 animate-pulse"></div>
 
-        <div className="container mx-auto px-[5%] max-w-[900px] scale-up-fade">
+        <div className="container mx-auto px-[5%] max-w-[900px]">
           <div className="text-center glass-panel p-10 md:p-14 rounded-3xl border border-white/5 relative">
             <div className="absolute inset-0 bg-gradient-to-tr from-tech-blue/5 to-tech-indigo/5 rounded-3xl -z-10"></div>
 
             <h2 className="text-[clamp(1.8rem,4vw,3.2rem)] font-bold tracking-tight leading-[1.15] mb-8 text-white uppercase">
               "Innovation is not a feature,<br />it's the{' '}
-              <span className="bg-gradient-to-r from-tech-sky to-tech-indigo bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-tech-sky via-cyan-400 to-tech-indigo bg-clip-text text-transparent">
                 foundation
               </span>."
             </h2>
             <p className="mt-6 text-[1.05rem] text-gray-400 leading-relaxed max-w-[650px] mx-auto font-sans">
-              &gt; Join the hundreds of companies that trust Orientis Digital to power their digital growth.
+              &gt; Join the growing number of modern enterprises relying on Orientis Digital software &amp; infrastructure.
             </p>
             <div className="mt-12">
               <Link
-                to="/company/contact"
-                className="inline-block px-10 py-4 font-bold transition-all duration-200 text-base bg-gradient-to-r from-tech-blue to-tech-indigo text-white border-0 hover:shadow-tech shadow-tech-sm uppercase tracking-wider rounded-md"
+                to="/contact"
+                className="inline-block px-10 py-4 font-bold transition-all duration-200 text-base bg-gradient-to-r from-tech-blue to-tech-indigo text-white border-0 hover:shadow-tech shadow-tech-sm uppercase tracking-wider rounded-xl"
               >
-                Start Your Journey
+                Start Your Project
               </Link>
             </div>
           </div>

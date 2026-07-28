@@ -3,15 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import PageTransition from './components/PageTransition';
 
 import Home from './pages/Home';
-import Platform from './pages/Platform';
-import CustomSoftware from './pages/solutions/CustomSoftware';
-import CloudOps from './pages/solutions/CloudOps';
-import TechConsulting from './pages/solutions/TechConsulting';
+import Products from './pages/Products';
+import Solutions from './pages/Solutions';
 import About from './pages/company/About';
-import Blog from './pages/company/Blog';
-import Careers from './pages/company/Careers';
 import Contact from './pages/company/Contact';
 import Privacy from './pages/legal/Privacy';
 import Terms from './pages/legal/Terms';
@@ -21,20 +18,26 @@ export default function App() {
     <Router>
       <ScrollToTop />
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/platform" element={<Platform />} />
-        <Route path="/solutions/custom-software" element={<CustomSoftware />} />
-        <Route path="/solutions/cloud-ops" element={<CloudOps />} />
-        <Route path="/solutions/tech-consulting" element={<TechConsulting />} />
-        <Route path="/company/about" element={<About />} />
-        <Route path="/company/blog" element={<Blog />} />
-        <Route path="/company/careers" element={<Careers />} />
-        <Route path="/company/contact" element={<Contact />} />
-        <Route path="/legal/privacy" element={<Privacy />} />
-        <Route path="/legal/terms" element={<Terms />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
+      <PageTransition>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/solutions" element={<Solutions />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          {/* Fallback & Legacy Redirects */}
+          <Route path="/platform" element={<Solutions />} />
+          <Route path="/company/about" element={<About />} />
+          <Route path="/company/contact" element={<Contact />} />
+          <Route path="/solutions/*" element={<Solutions />} />
+          <Route path="/company/*" element={<About />} />
+          <Route path="/legal/privacy" element={<Privacy />} />
+          <Route path="/legal/terms" element={<Terms />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </PageTransition>
       <Footer />
     </Router>
   );

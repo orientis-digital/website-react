@@ -68,31 +68,47 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Company */}
+          {/* Column 2: Navigation & Company */}
           <div className="flex flex-col">
             <h4 className="text-lg font-bold mb-4 text-white uppercase tracking-widest border-b border-tech-slate pb-2">
-              Company
+              Navigation
             </h4>
             <ul className="list-none space-y-2">
               <li>
                 <Link
-                  to="/company/about"
+                  to="/"
                   className="text-muted no-underline transition-colors text-sm hover:text-tech-sky hover:pl-2 font-sans"
                 >
-                  &gt; Our Story
+                  &gt; Home
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/company/careers"
+                  to="/products"
                   className="text-muted no-underline transition-colors text-sm hover:text-tech-sky hover:pl-2 font-sans"
                 >
-                  &gt; Careers
+                  &gt; Products
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/company/contact"
+                  to="/solutions"
+                  className="text-muted no-underline transition-colors text-sm hover:text-tech-sky hover:pl-2 font-sans"
+                >
+                  &gt; Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="text-muted no-underline transition-colors text-sm hover:text-tech-sky hover:pl-2 font-sans"
+                >
+                  &gt; About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
                   className="text-muted no-underline transition-colors text-sm hover:text-tech-sky hover:pl-2 font-sans"
                 >
                   &gt; Contact
@@ -101,34 +117,42 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Solutions */}
+          {/* Column 3: Products */}
           <div className="flex flex-col">
             <h4 className="text-lg font-bold mb-4 text-white uppercase tracking-widest border-b border-tech-slate pb-2">
-              Solutions
+              Product Suite
             </h4>
             <ul className="list-none space-y-2">
               <li>
                 <Link
-                  to="/solutions/custom-software"
+                  to="/products"
                   className="text-muted no-underline transition-colors text-sm hover:text-tech-sky hover:pl-2 font-sans"
                 >
-                  &gt; Custom Software
+                  &gt; Cloud Orchestrator
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/solutions/tech-consulting"
+                  to="/products"
                   className="text-muted no-underline transition-colors text-sm hover:text-tech-sky hover:pl-2 font-sans"
                 >
-                  &gt; Tech Consulting
+                  &gt; Nexus API Gateway
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/solutions/cloud-ops"
+                  to="/products"
                   className="text-muted no-underline transition-colors text-sm hover:text-tech-sky hover:pl-2 font-sans"
                 >
-                  &gt; Cloud Ops
+                  &gt; ShieldOps Cyber
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/products"
+                  className="text-muted no-underline transition-colors text-sm hover:text-tech-sky hover:pl-2 font-sans"
+                >
+                  &gt; DataFlow Analytics
                 </Link>
               </li>
             </ul>
@@ -172,13 +196,13 @@ export default function Footer() {
           <p className="text-muted">© 2026 Orientis Digital: Unified Tech Solutions_</p>
           <div className="flex gap-8">
             <Link
-              to="/legal/privacy"
+              to="/privacy"
               className="text-muted no-underline transition-colors hover:text-tech-sky hover:underline decoration-tech-sky underline-offset-4"
             >
               Privacy Policy
             </Link>
             <Link
-              to="/legal/terms"
+              to="/terms"
               className="text-muted no-underline transition-colors hover:text-tech-sky hover:underline decoration-tech-sky underline-offset-4"
             >
               Terms of Service
