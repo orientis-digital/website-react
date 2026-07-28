@@ -30,13 +30,13 @@ export default function Footer() {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8 relative z-10 text-center lg:text-left">
             <div>
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-tech-blue/30 bg-tech-blue/10 text-tech-sky text-xs font-mono uppercase tracking-widest mb-3">
-                <i className="fa-solid fa-rocket"></i> Scale Your Operations
+                <i className="fa-solid fa-rocket"></i> Digital Transformation, Locally Delivered
               </span>
               <h3 className="text-2xl md:text-3xl font-extrabold text-white uppercase tracking-tight">
                 Ready to Architect Your Digital Future?
               </h3>
               <p className="text-gray-400 text-sm max-w-[620px] mt-2 leading-relaxed font-sans">
-                Partner with Orientis Digital for custom web/mobile software applications and managed IT infrastructure.
+                Partner with Orientis Digital in Tacloban City for custom web/mobile software applications, BIR-compliant SaaS software, and managed IT services.
               </p>
             </div>
 
@@ -58,7 +58,7 @@ export default function Footer() {
         </div>
 
         {/* Main Footer Links Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1.2fr_1.2fr_1.6fr] gap-10 pb-16 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1.3fr_1.1fr_1.6fr] gap-10 pb-16 border-b border-white/10">
           {/* Column 1: Brand & Status */}
           <div className="flex flex-col justify-between">
             <div>
@@ -83,9 +83,17 @@ export default function Footer() {
                 </div>
               </Link>
 
-              <p className="text-xs text-gray-400 leading-relaxed mb-6 font-sans border-l-2 border-tech-blue/40 pl-3">
-                &gt; Custom web &amp; mobile software engineering, BIR-compliant SaaS solutions, and managed IT services in Tacloban City, Philippines.
+              <p className="text-xs text-gray-400 leading-relaxed mb-4 font-sans border-l-2 border-tech-blue/40 pl-3">
+                &gt; Custom web &amp; mobile software engineering, BIR-compliant SaaS solutions, and managed IT services in Tacloban City, Leyte, Philippines.
               </p>
+
+              {/* Direct Email Display */}
+              <div className="text-xs font-mono text-gray-300 mb-6 flex items-center gap-2">
+                <i className="fa-solid fa-envelope text-tech-sky"></i>
+                <a href="mailto:orientisdigital.official@gmail.com" className="hover:underline text-gray-300 hover:text-white">
+                  orientisdigital.official@gmail.com
+                </a>
+              </div>
 
               {/* System Active Status */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-[11px] font-mono uppercase tracking-wider mb-6">
@@ -127,28 +135,59 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Products */}
+          {/* Column 2: Upcoming SaaS Products */}
           <div className="flex flex-col">
             <h4 className="text-xs font-mono font-bold text-white uppercase tracking-widest mb-5 border-b border-tech-slate/50 pb-2">
               // Software Products
             </h4>
             <ul className="list-none space-y-2.5 p-0 m-0">
+              <li className="text-xs font-mono text-tech-sky flex items-center gap-1.5 mb-2">
+                <i className="fa-solid fa-clock text-[10px]"></i>
+                Will Be Posted Soon
+              </li>
               <li>
                 <Link
                   to="/products"
-                  className="text-xs text-tech-sky hover:underline transition-colors flex items-center gap-1.5 font-mono"
+                  className="text-xs text-gray-400 hover:text-white transition-colors flex items-center justify-between"
                 >
-                  <i className="fa-solid fa-clock text-[9px]"></i>
-                  Will Be Posted Soon
+                  <span>OrientPOS</span>
+                  <span className="text-[10px] font-mono text-gray-600">POS</span>
                 </Link>
               </li>
               <li>
                 <Link
                   to="/products"
-                  className="text-xs text-gray-400 hover:text-white transition-colors flex items-center gap-1.5"
+                  className="text-xs text-gray-400 hover:text-white transition-colors flex items-center justify-between"
                 >
-                  <i className="fa-solid fa-chevron-right text-[9px] text-tech-sky"></i>
-                  Join Early Waitlist
+                  <span>OrientInventory</span>
+                  <span className="text-[10px] font-mono text-gray-600">Stock</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/products"
+                  className="text-xs text-gray-400 hover:text-white transition-colors flex items-center justify-between"
+                >
+                  <span>OrientHR</span>
+                  <span className="text-[10px] font-mono text-gray-600">Payroll</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/products"
+                  className="text-xs text-gray-400 hover:text-white transition-colors flex items-center justify-between"
+                >
+                  <span>OrientBook</span>
+                  <span className="text-[10px] font-mono text-gray-600">Finance</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/products"
+                  className="text-xs text-gray-400 hover:text-white transition-colors flex items-center justify-between"
+                >
+                  <span>OrientGov</span>
+                  <span className="text-[10px] font-mono text-gray-600">GovTech</span>
                 </Link>
               </li>
             </ul>
@@ -157,7 +196,7 @@ export default function Footer() {
           {/* Column 3: Navigation */}
           <div className="flex flex-col">
             <h4 className="text-xs font-mono font-bold text-white uppercase tracking-widest mb-5 border-b border-tech-slate/50 pb-2">
-              // Platform Navigation
+              // Navigation
             </h4>
             <ul className="list-none space-y-2.5 p-0 m-0">
               <li>
@@ -166,7 +205,7 @@ export default function Footer() {
                   className="text-xs text-gray-400 hover:text-tech-sky transition-colors flex items-center gap-1.5"
                 >
                   <i className="fa-solid fa-chevron-right text-[9px] text-tech-sky"></i>
-                  Home Overview
+                  Home
                 </Link>
               </li>
               <li>
@@ -175,7 +214,7 @@ export default function Footer() {
                   className="text-xs text-gray-400 hover:text-tech-sky transition-colors flex items-center gap-1.5"
                 >
                   <i className="fa-solid fa-chevron-right text-[9px] text-tech-sky"></i>
-                  Software Products
+                  Products
                 </Link>
               </li>
               <li>
@@ -184,7 +223,7 @@ export default function Footer() {
                   className="text-xs text-gray-400 hover:text-tech-sky transition-colors flex items-center gap-1.5"
                 >
                   <i className="fa-solid fa-chevron-right text-[9px] text-tech-sky"></i>
-                  Solutions &amp; Advisory
+                  Solutions
                 </Link>
               </li>
               <li>
@@ -202,7 +241,7 @@ export default function Footer() {
                   className="text-xs text-gray-400 hover:text-tech-sky transition-colors flex items-center gap-1.5"
                 >
                   <i className="fa-solid fa-chevron-right text-[9px] text-tech-sky"></i>
-                  Contact Engineering
+                  Contact Us
                 </Link>
               </li>
             </ul>
@@ -258,7 +297,7 @@ export default function Footer() {
             <span>© 2026 Orientis Digital: Unified Tech Solutions_</span>
             <span className="hidden md:inline text-gray-700">|</span>
             <span className="inline-flex items-center gap-1.5 font-mono text-[11px] text-gray-400">
-              <i className="fa-solid fa-shield-cat text-tech-sky"></i> Tacloban City, Leyte, Philippines
+              <i className="fa-solid fa-location-dot text-tech-sky"></i> Tacloban City, Leyte, Philippines
             </span>
           </div>
 
