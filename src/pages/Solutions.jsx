@@ -24,9 +24,9 @@ const solutionsList = [
     category: 'cloud',
     icon: 'fa-solid fa-cloud',
     accent: 'text-tech-indigo',
-    badge: 'Managed SLA',
+    badge: 'Managed IT',
     description:
-      'Enterprise cloud management, CI/CD automation, and multi-region infrastructure hosting across AWS, GCP, and Azure with 99.99% uptime.',
+      'Enterprise cloud management, CI/CD automation, and multi-region infrastructure hosting across AWS, GCP, and Azure with high-availability monitoring.',
     capabilities: [
       'Managed AWS/GCP Infrastructure',
       'Kubernetes & Docker Orchestration',
@@ -52,7 +52,7 @@ const solutionsList = [
   },
   {
     id: 'support-maintenance',
-    title: '24/7 Monitoring & Support',
+    title: 'Monitoring & Support',
     category: 'cloud',
     icon: 'fa-solid fa-life-ring',
     accent: 'text-tech-indigo',
@@ -60,7 +60,7 @@ const solutionsList = [
     description:
       'Continuous health monitoring, automated security patch application, SSL renewal, and high-availability database backups.',
     capabilities: [
-      'Real-Time Uptime Monitoring',
+      'Real-Time Infrastructure Monitoring',
       'Automated Security Patching',
       'Disaster Recovery Drills',
       'Performance Fine-Tuning'
@@ -99,7 +99,7 @@ export default function Solutions() {
         <div className="absolute top-1/3 left-1/2 w-[700px] h-[500px] bg-tech-indigo/10 -translate-x-1/2 -translate-y-1/2 blur-[140px] pointer-events-none -z-10"></div>
 
         <div className="container mx-auto px-[5%] max-w-[1200px] text-center fade-up">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-tech-indigo/30 bg-tech-indigo/10 text-tech-indigo text-xs font-mono uppercase tracking-widest mb-6">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-tech-indigo/30 bg-tech-indigo/10 text-tech-sky text-xs font-mono uppercase tracking-widest mb-6">
             <i className="fa-solid fa-layer-group"></i> Tailored Capabilities
           </span>
 
@@ -110,7 +110,7 @@ export default function Solutions() {
             </span>
           </h1>
 
-          <p className="max-w-[720px] mx-auto text-gray-400 text-base md:text-lg leading-relaxed font-sans mb-10">
+          <p className="max-w-[720px] mx-auto text-gray-300 text-base md:text-lg leading-relaxed font-sans mb-10">
             From modern cloud operations and custom software engineering to strategic advisory and edge IoT systems — Orientis Digital delivers end-to-end technology solutions.
           </p>
 
@@ -120,7 +120,7 @@ export default function Solutions() {
               onClick={() => setFilter('all')}
               className={`px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 filter === 'all'
-                  ? 'bg-tech-indigo text-white shadow-tech-sm'
+                  ? 'bg-tech-blue text-white shadow-tech-sm'
                   : 'bg-tech-black/60 border border-white/10 text-gray-400 hover:text-white'
               }`}
             >
@@ -130,7 +130,7 @@ export default function Solutions() {
               onClick={() => setFilter('engineering')}
               className={`px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 filter === 'engineering'
-                  ? 'bg-tech-indigo text-white shadow-tech-sm'
+                  ? 'bg-tech-blue text-white shadow-tech-sm'
                   : 'bg-tech-black/60 border border-white/10 text-gray-400 hover:text-white'
               }`}
             >
@@ -140,7 +140,7 @@ export default function Solutions() {
               onClick={() => setFilter('cloud')}
               className={`px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 filter === 'cloud'
-                  ? 'bg-tech-indigo text-white shadow-tech-sm'
+                  ? 'bg-tech-blue text-white shadow-tech-sm'
                   : 'bg-tech-black/60 border border-white/10 text-gray-400 hover:text-white'
               }`}
             >
@@ -150,7 +150,7 @@ export default function Solutions() {
               onClick={() => setFilter('consulting')}
               className={`px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 filter === 'consulting'
-                  ? 'bg-tech-indigo text-white shadow-tech-sm'
+                  ? 'bg-tech-blue text-white shadow-tech-sm'
                   : 'bg-tech-black/60 border border-white/10 text-gray-400 hover:text-white'
               }`}
             >
@@ -174,7 +174,7 @@ export default function Solutions() {
                     <div className="w-12 h-12 rounded-2xl bg-tech-blue/10 border border-tech-blue/20 flex items-center justify-center text-tech-sky text-2xl group-hover:scale-110 transition-transform">
                       <i className={item.icon}></i>
                     </div>
-                    <span className="px-3 py-1 rounded-full text-[10px] font-mono uppercase bg-tech-black border border-white/10 text-tech-indigo">
+                    <span className="px-3 py-1 rounded-full text-[10px] font-mono uppercase bg-tech-black border border-white/10 text-tech-sky">
                       {item.badge}
                     </span>
                   </div>
@@ -212,16 +212,16 @@ export default function Solutions() {
       {/* Custom Consultation Section */}
       <section className="py-20 border-t border-white/5">
         <div className="container mx-auto px-[5%] max-w-[900px] text-center">
-          <div className="glass-panel p-10 rounded-3xl border border-dashed border-white/20">
+          <div className="glass-panel p-10 rounded-3xl border border-white/10">
             <h3 className="text-2xl font-bold text-white uppercase mb-3">
               Need a Custom Solution Package?
             </h3>
-            <p className="text-gray-400 text-sm mb-6 max-w-[600px] mx-auto">
+            <p className="text-gray-400 text-sm mb-6 max-w-[600px] mx-auto font-sans">
               We create custom hybrid service packages combining software development, managed cloud ops, and ongoing technical advisory.
             </p>
             <Link
               to="/contact"
-              className="inline-block px-8 py-3 font-bold text-xs uppercase tracking-wider text-white bg-gradient-to-r from-tech-blue to-tech-indigo rounded-xl shadow-tech"
+              className="inline-block px-8 py-3.5 font-bold text-xs uppercase tracking-wider text-white bg-gradient-to-r from-tech-blue to-tech-indigo rounded-xl shadow-tech"
             >
               Schedule Solution Scope
             </Link>

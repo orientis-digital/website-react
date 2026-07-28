@@ -2,47 +2,52 @@ import React from 'react';
 
 export default function Terms() {
   return (
-    <main className="flex-1">
-      <section className="min-h-[80vh] pt-32 pb-20 relative overflow-hidden bg-tech-black">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-tech-blue/5 rounded-full blur-[100px] -z-10"></div>
+    <main className="flex-1 pt-28 pb-24 min-h-[85vh]">
+      <section className="relative overflow-hidden pt-12 pb-20">
+        <div className="absolute top-1/3 left-1/2 w-[600px] h-[400px] bg-tech-indigo/10 -translate-x-1/2 -translate-y-1/2 blur-[140px] pointer-events-none -z-10"></div>
 
         <div className="container mx-auto px-[5%] max-w-[900px] fade-up">
-          <div className="mb-12 border-b border-tech-blue/30 pb-8">
-            <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-tight leading-[1.1] mb-6 text-white">
-              Terms of <span className="text-tech-blue">Service</span>
+          <div className="mb-12 border-b border-white/10 pb-8 text-center">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-tech-indigo/30 bg-tech-indigo/10 text-tech-sky text-xs font-mono uppercase tracking-widest mb-4">
+              <i className="fa-solid fa-file-contract"></i> Master Service Agreement
+            </span>
+            <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-extrabold tracking-tight uppercase leading-[1.1] mb-4 text-white">
+              Terms of <span className="bg-gradient-to-r from-tech-sky via-cyan-400 to-tech-indigo bg-clip-text text-transparent">Service</span>
             </h1>
-            <p className="text-gray-500 text-sm font-sans">
-              &gt; Last Updated: <span className="text-tech-blue">Jan 25, 2026</span>
+            <p className="text-gray-400 text-xs font-mono uppercase tracking-widest">
+              Orientis Digital // Last Updated: July 2026
             </p>
           </div>
 
-          <div className="space-y-12 text-gray-400">
-            <section className="border-l-2 border-gray-800 pl-6 hover:border-tech-blue transition-colors py-2">
-              <h3 className="text-xl font-bold mb-4 text-white hover:text-tech-blue transition-colors">
-                &gt; 1. Agreement
-              </h3>
-              <p className="text-[0.95rem] leading-relaxed">
-                By using Orientis Digital: Unified Tech Solutions services, you agree to these terms. These terms constitute a legally binding agreement between you and Orientis Digital: Unified Tech Solutions. Please read them carefully before accessing or using our services.
-              </p>
-            </section>
+          <div className="glass-panel p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden font-sans">
+            <div className="space-y-10 text-gray-300">
+              <section>
+                <h3 className="text-xl font-bold mb-3 text-white uppercase font-mono flex items-center gap-2">
+                  <span className="text-tech-sky">&gt;</span> 1. Service Agreement
+                </h3>
+                <p className="text-sm leading-relaxed text-gray-400">
+                  By accessing or engaging Orientis Digital: Unified Tech Solutions for custom software development, SaaS products, or managed IT services, you agree to these master service terms and project milestone agreements.
+                </p>
+              </section>
 
-            <section className="border-l-2 border-gray-800 pl-6 hover:border-tech-blue transition-colors py-2">
-              <h3 className="text-xl font-bold mb-4 text-white hover:text-tech-blue transition-colors">
-                &gt; 2. Service Availability
-              </h3>
-              <p className="text-[0.95rem] leading-relaxed">
-                We strive for 99.9% uptime on all managed services but do not guarantee uninterrupted access in force majeure events, scheduled maintenance, or unforeseen technical issues beyond our reasonable control.
-              </p>
-            </section>
+              <section>
+                <h3 className="text-xl font-bold mb-3 text-white uppercase font-mono flex items-center gap-2">
+                  <span className="text-tech-indigo">&gt;</span> 2. Service Availability &amp; Support
+                </h3>
+                <p className="text-sm leading-relaxed text-gray-400">
+                  Orientis Digital provides high-availability hosting and SLA-backed maintenance for all client projects. Scheduled system maintenance and emergency security patches are performed with advance notice whenever possible.
+                </p>
+              </section>
 
-            <section className="border-l-2 border-gray-800 pl-6 hover:border-tech-blue transition-colors py-2">
-              <h3 className="text-xl font-bold mb-4 text-white hover:text-tech-blue transition-colors">
-                &gt; 3. Limitation of Liability
-              </h3>
-              <p className="text-[0.95rem] leading-relaxed">
-                Orientis Digital: Unified Tech Solutions is not liable for indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the services.
-              </p>
-            </section>
+              <section>
+                <h3 className="text-xl font-bold mb-3 text-white uppercase font-mono flex items-center gap-2">
+                  <span className="text-cyan-400">&gt;</span> 3. Intellectual Property &amp; Deliverables
+                </h3>
+                <p className="text-sm leading-relaxed text-gray-400">
+                  Upon full payment of project milestones, clients retain full ownership of custom code deliverables specified in their contract. Proprietary Orientis SaaS core engines remain the intellectual property of Orientis Digital.
+                </p>
+              </section>
+            </div>
           </div>
         </div>
       </section>

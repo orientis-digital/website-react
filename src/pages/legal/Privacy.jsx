@@ -2,44 +2,49 @@ import React from 'react';
 
 export default function Privacy() {
   return (
-    <main className="flex-1">
-      <section className="min-h-[80vh] pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-tech-blue/5 rounded-full blur-[100px] -z-10"></div>
+    <main className="flex-1 pt-28 pb-24 min-h-[85vh]">
+      <section className="relative overflow-hidden pt-12 pb-20">
+        <div className="absolute top-1/3 left-1/2 w-[600px] h-[400px] bg-tech-blue/10 -translate-x-1/2 -translate-y-1/2 blur-[140px] pointer-events-none -z-10"></div>
 
         <div className="container mx-auto px-[5%] max-w-[900px] fade-up">
-          <div className="mb-12 border-b border-white/10 pb-8">
-            <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-extrabold tracking-tight leading-[1.1] mb-6 text-white">
-              Privacy <span className="text-tech-blue">Policy</span>
+          <div className="mb-12 border-b border-white/10 pb-8 text-center">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-tech-blue/30 bg-tech-blue/10 text-tech-sky text-xs font-mono uppercase tracking-widest mb-4">
+              <i className="fa-solid fa-shield-cat"></i> Data Protection &amp; Compliance
+            </span>
+            <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-extrabold tracking-tight uppercase leading-[1.1] mb-4 text-white">
+              Privacy <span className="bg-gradient-to-r from-tech-sky via-cyan-400 to-tech-indigo bg-clip-text text-transparent">Policy</span>
             </h1>
-            <p className="text-gray-400 text-sm uppercase tracking-widest">Last Updated: Jan 25, 2026</p>
+            <p className="text-gray-400 text-xs font-mono uppercase tracking-widest">
+              Orientis Digital // Last Updated: July 2026
+            </p>
           </div>
 
-          <div className="glass-panel p-8 md:p-12 rounded-3xl border border-white/5 shadow-xl relative overflow-hidden">
-            <div className="space-y-12 text-gray-400">
+          <div className="glass-panel p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden font-sans">
+            <div className="space-y-10 text-gray-300">
               <section>
-                <h3 className="text-2xl font-bold mb-4 text-white hover:text-tech-sky transition-colors">
-                  1. Information Collection
+                <h3 className="text-xl font-bold mb-3 text-white uppercase font-mono flex items-center gap-2">
+                  <span className="text-tech-sky">&gt;</span> 1. Information Collection
                 </h3>
-                <p className="text-lg leading-relaxed">
-                  We collect information necessary to provide our technology solutions, including basic contact details and technical logs. This may include IP addresses, device information, and usage data required for system optimization.
+                <p className="text-sm leading-relaxed text-gray-400">
+                  Orientis Digital collects information necessary to provide our custom software solutions, managed IT services, and SaaS platforms. This includes basic contact details provided during inquiry forms and technical system telemetry required for platform optimization and security audits.
                 </p>
               </section>
 
               <section>
-                <h3 className="text-2xl font-bold mb-4 text-white hover:text-tech-sky transition-colors">
-                  2. Data Usage
+                <h3 className="text-xl font-bold mb-3 text-white uppercase font-mono flex items-center gap-2">
+                  <span className="text-tech-indigo">&gt;</span> 2. Data Usage &amp; Privacy
                 </h3>
-                <p className="text-lg leading-relaxed">
-                  Your data is used solely for the purpose of service delivery, platform improvement, and legal compliance. We do not sell your data. We may use aggregated, anonymized data to improve our platform efficiency.
+                <p className="text-sm leading-relaxed text-gray-400">
+                  Your data is used strictly for service delivery, system maintenance, and regulatory compliance. We do not sell or rent personal information to third parties. All operational telemetry is protected under encrypted databases.
                 </p>
               </section>
 
               <section>
-                <h3 className="text-2xl font-bold mb-4 text-white hover:text-tech-sky transition-colors">
-                  3. Security
+                <h3 className="text-xl font-bold mb-3 text-white uppercase font-mono flex items-center gap-2">
+                  <span className="text-cyan-400">&gt;</span> 3. Security Infrastructure
                 </h3>
-                <p className="text-lg leading-relaxed">
-                  We employ industry-standard encryption and security protocols to protect your personal information. Access to your data is strictly limited to authorized personnel with a legitimate business need.
+                <p className="text-sm leading-relaxed text-gray-400">
+                  We employ industry-standard SSL/TLS encryption, secure database partitioning, and strict role-based access controls to safeguard all records.
                 </p>
               </section>
             </div>
