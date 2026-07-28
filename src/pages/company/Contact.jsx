@@ -30,22 +30,22 @@ export default function Contact() {
               </span>
             </h1>
             <p className="text-gray-400 text-sm md:text-base font-sans mb-10">
-              &gt; Ready to discuss custom software development, OrientPOS, or managed IT support?
+              &gt; Ready to discuss custom web apps, mobile solutions, or IT consultancy?
             </p>
 
             <ContactForm />
           </div>
 
-          {/* Right Column: HQ & Capabilities Sidebar */}
+          {/* Right Column: HQ & Official Channels */}
           <div className="glass-panel p-6 md:p-10 rounded-3xl hover:border-tech-blue/30 transition-all duration-300 relative flex flex-col justify-center gap-6 mt-10 lg:mt-0 group fade-in-right">
             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-tech-blue to-transparent opacity-30"></div>
 
             <h2 className="text-xl font-bold text-white border-l-4 border-tech-blue pl-4 mb-2 uppercase tracking-wide">
-              Orientis Digital HQ
+              Orientis Digital Channels
             </h2>
 
             {/* HQ Info */}
-            <div className="bg-tech-black/40 border border-white/5 p-6 rounded-xl space-y-3 font-sans text-sm text-gray-300">
+            <div className="bg-tech-black/40 border border-white/5 p-6 rounded-xl space-y-4 font-sans text-sm text-gray-300">
               <div className="flex items-center gap-3">
                 <i className="fa-solid fa-location-dot text-tech-sky text-lg"></i>
                 <div>
@@ -53,11 +53,47 @@ export default function Contact() {
                   <span className="text-xs text-gray-400">Tacloban City, Leyte, Philippines</span>
                 </div>
               </div>
+
               <div className="flex items-center gap-3 border-t border-white/5 pt-3">
                 <i className="fa-solid fa-envelope text-tech-sky text-lg"></i>
                 <div>
-                  <span className="block font-bold text-white uppercase text-xs">Email Contact</span>
-                  <span className="text-xs text-gray-400">hello@orientisdigital.com / contact@orientis.tech</span>
+                  <span className="block font-bold text-white uppercase text-xs">Official Email</span>
+                  <a
+                    href="mailto:orientisdigital.official@gmail.com"
+                    className="text-xs text-tech-sky hover:underline"
+                  >
+                    orientisdigital.official@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3 border-t border-white/5 pt-3">
+                <i className="fa-brands fa-facebook text-[#1877F2] text-lg"></i>
+                <div>
+                  <span className="block font-bold text-white uppercase text-xs">Official Facebook</span>
+                  <a
+                    href="https://facebook.com/orientis-digital"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-xs text-tech-sky hover:underline"
+                  >
+                    facebook.com/orientis-digital
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3 border-t border-white/5 pt-3">
+                <i className="fa-brands fa-github text-white text-lg"></i>
+                <div>
+                  <span className="block font-bold text-white uppercase text-xs">GitHub Organization</span>
+                  <a
+                    href="https://github.com/orientis-digital"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-xs text-tech-sky hover:underline"
+                  >
+                    github.com/orientis-digital
+                  </a>
                 </div>
               </div>
             </div>
@@ -65,25 +101,13 @@ export default function Contact() {
             {/* Service Pillars */}
             <div className="bg-tech-black/40 border border-white/5 p-6 relative overflow-hidden group/item hover:border-tech-blue/30 transition-all duration-300 rounded-xl">
               <div className="flex items-center gap-4 mb-2 text-white">
-                <i className="fa-solid fa-cash-register text-[1.2rem] text-tech-blue"></i>
-                <h3 className="font-bold text-sm uppercase tracking-wider text-gray-200">
-                  OrientPOS &amp; SaaS Demos
-                </h3>
-              </div>
-              <p className="text-gray-400 text-xs font-sans leading-relaxed pl-8">
-                &gt; Request a live demo of OrientPOS, OrientInventory, OrientHR, or OrientBook for your store.
-              </p>
-            </div>
-
-            <div className="bg-tech-black/40 border border-white/5 p-6 relative overflow-hidden group/item hover:border-tech-blue/30 transition-all duration-300 rounded-xl">
-              <div className="flex items-center gap-4 mb-2 text-white">
                 <i className="fa-solid fa-code text-[1.2rem] text-tech-blue"></i>
                 <h3 className="font-bold text-sm uppercase tracking-wider text-gray-200">
-                  Custom Software Development
+                  Custom Software Engineering
                 </h3>
               </div>
               <p className="text-gray-400 text-xs font-sans leading-relaxed pl-8">
-                &gt; Tailored web and mobile applications engineered to solve your specific operational challenges.
+                &gt; Tailored web and mobile applications engineered for regional MSMEs, government agencies, and enterprises.
               </p>
             </div>
           </div>

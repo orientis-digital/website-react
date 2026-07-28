@@ -100,7 +100,16 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="flex gap-3">
               <a
-                href="https://github.com"
+                href="https://facebook.com/orientis-digital"
+                target="_blank"
+                rel="noreferrer"
+                className="w-9 h-9 rounded-xl border border-white/10 bg-tech-gray/60 flex items-center justify-center text-gray-400 hover:text-[#1877F2] hover:border-[#1877F2] hover:bg-[#1877F2]/10 transition-all group"
+                aria-label="Facebook"
+              >
+                <i className="fa-brands fa-facebook-f group-hover:scale-110 transition-transform"></i>
+              </a>
+              <a
+                href="https://github.com/orientis-digital"
                 target="_blank"
                 rel="noreferrer"
                 className="w-9 h-9 rounded-xl border border-white/10 bg-tech-gray/60 flex items-center justify-center text-gray-400 hover:text-white hover:border-tech-sky hover:bg-tech-blue/10 transition-all group"
@@ -109,26 +118,8 @@ export default function Footer() {
                 <i className="fa-brands fa-github group-hover:scale-110 transition-transform"></i>
               </a>
               <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-xl border border-white/10 bg-tech-gray/60 flex items-center justify-center text-gray-400 hover:text-white hover:border-tech-sky hover:bg-tech-blue/10 transition-all group"
-                aria-label="LinkedIn"
-              >
-                <i className="fa-brands fa-linkedin-in group-hover:scale-110 transition-transform"></i>
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-xl border border-white/10 bg-tech-gray/60 flex items-center justify-center text-gray-400 hover:text-white hover:border-tech-sky hover:bg-tech-blue/10 transition-all group"
-                aria-label="Twitter/X"
-              >
-                <i className="fa-brands fa-x-twitter group-hover:scale-110 transition-transform"></i>
-              </a>
-              <a
-                href="mailto:contact@orientis.tech"
-                className="w-9 h-9 rounded-xl border border-white/10 bg-tech-gray/60 flex items-center justify-center text-gray-400 hover:text-white hover:border-tech-sky hover:bg-tech-blue/10 transition-all group"
+                href="mailto:orientisdigital.official@gmail.com"
+                className="w-9 h-9 rounded-xl border border-white/10 bg-tech-gray/60 flex items-center justify-center text-gray-400 hover:text-tech-sky hover:border-tech-sky hover:bg-tech-blue/10 transition-all group"
                 aria-label="Email"
               >
                 <i className="fa-solid fa-envelope group-hover:scale-110 transition-transform"></i>
