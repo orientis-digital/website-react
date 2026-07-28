@@ -36,7 +36,7 @@ export default function Footer() {
                 Ready to Architect Your Digital Future?
               </h3>
               <p className="text-gray-400 text-sm max-w-[620px] mt-2 leading-relaxed font-sans">
-                Partner with Orientis Digital in Tacloban City for custom web/mobile software applications, BIR-compliant SaaS software, and managed IT services.
+                Partner with Orientis Digital in Tacloban City for custom web/mobile software applications and managed IT services.
               </p>
             </div>
 
@@ -58,7 +58,7 @@ export default function Footer() {
         </div>
 
         {/* Main Footer Links Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1.3fr_1.1fr_1.6fr] gap-10 pb-16 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1.2fr_1.2fr_1.6fr] gap-10 pb-16 border-b border-white/10">
           {/* Column 1: Brand & Status */}
           <div className="flex flex-col justify-between">
             <div>
@@ -135,7 +135,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Upcoming SaaS Products */}
+          {/* Column 2: Software Products */}
           <div className="flex flex-col">
             <h4 className="text-xs font-mono font-bold text-white uppercase tracking-widest mb-5 border-b border-tech-slate/50 pb-2">
               // Software Products
@@ -148,46 +148,10 @@ export default function Footer() {
               <li>
                 <Link
                   to="/products"
-                  className="text-xs text-gray-400 hover:text-white transition-colors flex items-center justify-between"
+                  className="text-xs text-gray-400 hover:text-white transition-colors flex items-center gap-1.5"
                 >
-                  <span>OrientPOS</span>
-                  <span className="text-[10px] font-mono text-gray-600">POS</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/products"
-                  className="text-xs text-gray-400 hover:text-white transition-colors flex items-center justify-between"
-                >
-                  <span>OrientInventory</span>
-                  <span className="text-[10px] font-mono text-gray-600">Stock</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/products"
-                  className="text-xs text-gray-400 hover:text-white transition-colors flex items-center justify-between"
-                >
-                  <span>OrientHR</span>
-                  <span className="text-[10px] font-mono text-gray-600">Payroll</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/products"
-                  className="text-xs text-gray-400 hover:text-white transition-colors flex items-center justify-between"
-                >
-                  <span>OrientBook</span>
-                  <span className="text-[10px] font-mono text-gray-600">Finance</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/products"
-                  className="text-xs text-gray-400 hover:text-white transition-colors flex items-center justify-between"
-                >
-                  <span>OrientGov</span>
-                  <span className="text-[10px] font-mono text-gray-600">GovTech</span>
+                  <i className="fa-solid fa-chevron-right text-[9px] text-tech-sky"></i>
+                  Early Access Waitlist
                 </Link>
               </li>
             </ul>
