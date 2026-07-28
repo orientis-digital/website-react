@@ -82,96 +82,64 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-tech-sky/40 transition-all group">
-              <div className="w-12 h-12 rounded-xl bg-tech-blue/10 border border-tech-blue/20 flex items-center justify-center text-tech-sky text-xl mb-4 group-hover:scale-110 transition-transform">
-                <i className="fa-solid fa-server"></i>
+            <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-tech-sky/40 transition-all group flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-tech-blue/10 border border-tech-blue/20 flex items-center justify-center text-tech-sky text-xl mb-4 group-hover:scale-110 transition-transform">
+                  <i className="fa-solid fa-server"></i>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-tech-sky transition-colors">
+                  Cloud Orchestrator
+                </h3>
+                <p className="text-xs text-gray-400 leading-relaxed font-sans">
+                  Automated multi-cloud workload provisioning &amp; zero-downtime deployments.
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-tech-sky transition-colors">
-                Cloud Orchestrator
-              </h3>
-              <p className="text-xs text-gray-400 leading-relaxed mb-4">
-                Automated multi-cloud workload provisioning &amp; zero-downtime deployments.
-              </p>
-              <span className="text-[11px] font-mono text-tech-indigo uppercase font-semibold">
-                99.999% SLA Uptime
-              </span>
+              <Link
+                to="/products"
+                className="mt-6 inline-flex items-center gap-1 text-xs font-bold text-tech-sky hover:underline uppercase tracking-wider"
+              >
+                Learn More &gt;
+              </Link>
             </div>
 
-            <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-tech-indigo/40 transition-all group">
-              <div className="w-12 h-12 rounded-xl bg-tech-indigo/10 border border-tech-indigo/20 flex items-center justify-center text-tech-indigo text-xl mb-4 group-hover:scale-110 transition-transform">
-                <i className="fa-solid fa-network-wired"></i>
+            <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-tech-indigo/40 transition-all group flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-tech-indigo/10 border border-tech-indigo/20 flex items-center justify-center text-tech-indigo text-xl mb-4 group-hover:scale-110 transition-transform">
+                  <i className="fa-solid fa-network-wired"></i>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-tech-indigo transition-colors">
+                  Nexus API Gateway
+                </h3>
+                <p className="text-xs text-gray-400 leading-relaxed font-sans">
+                  Sub-millisecond API proxy with adaptive DDoS protection and rate limiting.
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-tech-indigo transition-colors">
-                Nexus API Gateway
-              </h3>
-              <p className="text-xs text-gray-400 leading-relaxed mb-4">
-                Sub-millisecond API proxy with adaptive DDoS protection and rate limiting.
-              </p>
-              <span className="text-[11px] font-mono text-tech-sky uppercase font-semibold">
-                &lt; 0.8ms Latency
-              </span>
+              <Link
+                to="/products"
+                className="mt-6 inline-flex items-center gap-1 text-xs font-bold text-tech-indigo hover:underline uppercase tracking-wider"
+              >
+                Learn More &gt;
+              </Link>
             </div>
 
-            <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-cyan-400/40 transition-all group">
-              <div className="w-12 h-12 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 text-xl mb-4 group-hover:scale-110 transition-transform">
-                <i className="fa-solid fa-shield-halved"></i>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                ShieldOps Cyber
-              </h3>
-              <p className="text-xs text-gray-400 leading-relaxed mb-4">
-                AI incident response, continuous audit scanning &amp; vulnerability patching.
-              </p>
-              <span className="text-[11px] font-mono text-cyan-400 uppercase font-semibold">
-                24/7 Threat Neutralization
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 bg-tech-black border-t border-white/5 relative z-20">
-        <div className="container mx-auto px-[5%] max-w-[1200px]">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="glass-panel p-6 rounded-2xl flex items-center gap-6 group hover:border-tech-blue/30 transition-all duration-300">
-              <div className="w-14 h-14 bg-tech-blue/10 border border-tech-blue/20 rounded-xl flex items-center justify-center text-tech-sky text-2xl group-hover:scale-110 transition-transform duration-300">
-                <i className="fa-solid fa-cloud-arrow-up"></i>
-              </div>
+            <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-cyan-400/40 transition-all group flex flex-col justify-between">
               <div>
-                <span className="block text-2xl md:text-3xl font-extrabold text-white tracking-tight leading-none font-mono mb-1">
-                  99.99%
-                </span>
-                <span className="block text-xs uppercase tracking-widest text-gray-400">
-                  System SLA Uptime
-                </span>
+                <div className="w-12 h-12 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 text-xl mb-4 group-hover:scale-110 transition-transform">
+                  <i className="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                  ShieldOps Cyber
+                </h3>
+                <p className="text-xs text-gray-400 leading-relaxed font-sans">
+                  AI incident response, continuous audit scanning &amp; vulnerability patching.
+                </p>
               </div>
-            </div>
-            <div className="glass-panel p-6 rounded-2xl flex items-center gap-6 group hover:border-tech-indigo/30 transition-all duration-300">
-              <div className="w-14 h-14 bg-tech-indigo/10 border border-tech-indigo/20 rounded-xl flex items-center justify-center text-tech-indigo text-2xl group-hover:scale-110 transition-transform duration-300">
-                <i className="fa-solid fa-code-branch"></i>
-              </div>
-              <div>
-                <span className="block text-2xl md:text-3xl font-extrabold text-white tracking-tight leading-none font-mono mb-1">
-                  50M+
-                </span>
-                <span className="block text-xs uppercase tracking-widest text-gray-400">
-                  Daily API Requests
-                </span>
-              </div>
-            </div>
-            <div className="glass-panel p-6 rounded-2xl flex items-center gap-6 group hover:border-tech-blue/30 transition-all duration-300">
-              <div className="w-14 h-14 bg-tech-blue/10 border border-tech-blue/20 rounded-xl flex items-center justify-center text-tech-sky text-2xl group-hover:scale-110 transition-transform duration-300">
-                <i className="fa-solid fa-bolt"></i>
-              </div>
-              <div>
-                <span className="block text-2xl md:text-3xl font-extrabold text-white tracking-tight leading-none font-mono mb-1">
-                  250+
-                </span>
-                <span className="block text-xs uppercase tracking-widest text-gray-400">
-                  Global Cloud Deployments
-                </span>
-              </div>
+              <Link
+                to="/products"
+                className="mt-6 inline-flex items-center gap-1 text-xs font-bold text-cyan-400 hover:underline uppercase tracking-wider"
+              >
+                Learn More &gt;
+              </Link>
             </div>
           </div>
         </div>

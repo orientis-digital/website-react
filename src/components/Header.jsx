@@ -121,7 +121,7 @@ export default function Header() {
                       </span>
                     </div>
                     <p className="text-[11px] text-gray-400 font-sans leading-tight">
-                      Sub-millisecond API proxy.
+                      High-throughput API proxy.
                     </p>
                   </Link>
 
@@ -192,13 +192,13 @@ export default function Header() {
 
         {/* Right Header Controls: Live System Status & CTA Button */}
         <div className="hidden lg:flex items-center gap-5">
-          {/* Live Systems Badge */}
+          {/* Active Status Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/5 text-emerald-400 text-[11px] font-mono uppercase tracking-wider">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
             </span>
-            99.99% Online
+            Systems Active
           </div>
 
           {/* CTA Action */}
@@ -297,7 +297,7 @@ export default function Header() {
             <div className="flex items-center justify-between">
               <span className="text-xs text-emerald-400 font-mono flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                System Operational
+                Systems Active
               </span>
               <span className="text-xs text-gray-500 font-mono">Orientis v2026</span>
             </div>

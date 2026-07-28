@@ -87,13 +87,13 @@ export default function Footer() {
                 &gt; Modern cloud orchestration, high-throughput API gateways, and enterprise software engineered for global scale.
               </p>
 
-              {/* System SLA Live Status */}
+              {/* System Active Status */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-[11px] font-mono uppercase tracking-wider mb-6">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
                 </span>
-                99.99% Systems Operational
+                Systems Active
               </div>
             </div>
 

@@ -7,7 +7,7 @@ const productsData = [
     name: 'Orientis Cloud Orchestrator',
     tagline: 'Automated Multi-Cloud Infrastructure & Deployment Platform',
     category: 'cloud',
-    badge: 'v3.4 Production',
+    badge: 'Production Ready',
     icon: 'fa-solid fa-server',
     accentColor: 'from-tech-sky to-blue-500',
     borderColor: 'hover:border-tech-sky/40',
@@ -19,35 +19,33 @@ const productsData = [
       'Automated disaster recovery & failover',
       'Cost optimization & resource auto-tuning'
     ],
-    metrics: { uptime: '99.999%', latency: '< 5ms', deployments: '10K+/day' },
     codeSnippet: 'orientis deploy --env production --cluster aws-east-1 --canary 10%'
   },
   {
     id: 'nexus-gateway',
     name: 'Nexus API Gateway',
-    tagline: 'High-Throughput, Ultra-Low Latency Edge Proxy & Rate Limiter',
+    tagline: 'High-Throughput Edge Proxy & Rate Limiter',
     category: 'security',
-    badge: 'v2.1 Enterprise',
+    badge: 'Enterprise Platform',
     icon: 'fa-solid fa-network-wired',
     accentColor: 'from-tech-indigo to-orange-500',
     borderColor: 'hover:border-tech-indigo/40',
     description:
-      'Ultra-fast API gateway handling millions of requests per second with built-in OAuth2/JWT validation, dynamic rate limiting, and real-time distributed tracing.',
+      'Ultra-fast API gateway handling requests with built-in OAuth2/JWT validation, dynamic rate limiting, and real-time distributed tracing.',
     features: [
-      'Sub-millisecond routing latency',
+      'Sub-millisecond routing proxy',
       'Adaptive DDoS & bot mitigation',
       'GraphQL & gRPC native protocol support',
       'Automated OpenAPI specification generation'
     ],
-    metrics: { uptime: '99.99%', latency: '0.8ms', deployments: '50M+ Req/day' },
-    codeSnippet: 'nexus gateway proxy --target api.orientis.tech --rate-limit 5000/s'
+    codeSnippet: 'nexus gateway proxy --target api.orientis.tech --rate-limit adaptive'
   },
   {
     id: 'shieldops-sec',
     name: 'ShieldOps Cyber Monitor',
     tagline: 'AI-Driven Threat Detection & Incident Response Platform',
     category: 'security',
-    badge: 'v4.0 AI-Powered',
+    badge: 'Security Engine',
     icon: 'fa-solid fa-shield-halved',
     accentColor: 'from-cyan-400 to-tech-sky',
     borderColor: 'hover:border-cyan-400/40',
@@ -59,7 +57,6 @@ const productsData = [
       'SOC2 & ISO 27001 compliance enforcement',
       'Encrypted log telemetry storage'
     ],
-    metrics: { uptime: '99.99%', latency: '< 1s alert', deployments: '24/7 Shield' },
     codeSnippet: 'shieldops audit --scope cloud-infra --auto-remediate'
   },
   {
@@ -67,19 +64,18 @@ const productsData = [
     name: 'DataFlow Streaming Intelligence',
     tagline: 'Real-Time Edge Telemetry & Visual Analytics Engine',
     category: 'analytics',
-    badge: 'v1.8 High-Speed',
+    badge: 'Streaming Engine',
     icon: 'fa-solid fa-chart-line',
     accentColor: 'from-purple-500 to-tech-indigo',
     borderColor: 'hover:border-purple-500/40',
     description:
       'Process high-frequency IoT sensor data, event logs, and user telemetry in real-time with customizable visual dashboards and automated alerting.',
     features: [
-      'Sub-second stream processing engine',
+      'Stream processing engine',
       'Custom visual dashboard builder',
       'Integrations with Kafka, Snowflake, & PostgreSQL',
       'Edge device compression & sync'
     ],
-    metrics: { uptime: '99.95%', latency: '< 15ms stream', deployments: '1B+ Events' },
     codeSnippet: 'dataflow stream connect --source iot-gateway --pipeline analytics'
   }
 ];
@@ -107,7 +103,7 @@ export default function Products() {
           <h1 className="text-[clamp(2.5rem,5.5vw,4.5rem)] font-extrabold tracking-tight text-white uppercase leading-tight mb-6">
             Engineered for <br />
             <span className="bg-gradient-to-r from-tech-sky via-cyan-400 to-tech-indigo bg-clip-text text-transparent">
-              Maximum Scale &amp; Performance
+              Scalability &amp; Reliability
             </span>
           </h1>
 
@@ -202,22 +198,6 @@ export default function Products() {
                       </li>
                     ))}
                   </ul>
-
-                  {/* Metrics Bar */}
-                  <div className="grid grid-cols-3 gap-2 p-3 rounded-xl bg-tech-black/60 border border-white/5 mb-6 text-center font-mono text-xs">
-                    <div>
-                      <span className="block text-gray-500 text-[10px] uppercase">SLA Uptime</span>
-                      <span className="text-white font-bold">{product.metrics.uptime}</span>
-                    </div>
-                    <div>
-                      <span className="block text-gray-500 text-[10px] uppercase">Performance</span>
-                      <span className="text-tech-sky font-bold">{product.metrics.latency}</span>
-                    </div>
-                    <div>
-                      <span className="block text-gray-500 text-[10px] uppercase">Scale</span>
-                      <span className="text-tech-indigo font-bold">{product.metrics.deployments}</span>
-                    </div>
-                  </div>
                 </div>
 
                 {/* Card CTA Actions */}
