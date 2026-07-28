@@ -30,13 +30,13 @@ export default function Footer() {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8 relative z-10 text-center lg:text-left">
             <div>
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-tech-blue/30 bg-tech-blue/10 text-tech-sky text-xs font-mono uppercase tracking-widest mb-3">
-                <i className="fa-solid fa-rocket"></i> Scale Your Engineering
+                <i className="fa-solid fa-rocket"></i> Scale Your Operations
               </span>
               <h3 className="text-2xl md:text-3xl font-extrabold text-white uppercase tracking-tight">
                 Ready to Architect Your Digital Future?
               </h3>
-              <p className="text-gray-400 text-sm max-w-[620px] mt-2 leading-relaxed">
-                Join forward-thinking enterprise teams relying on Orientis Digital software products and managed cloud operations.
+              <p className="text-gray-400 text-sm max-w-[620px] mt-2 leading-relaxed font-sans">
+                Partner with Orientis Digital for custom web/mobile software applications and managed IT infrastructure.
               </p>
             </div>
 
@@ -45,13 +45,13 @@ export default function Footer() {
                 to="/contact"
                 className="px-8 py-3.5 text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-tech-blue via-cyan-500 to-tech-indigo rounded-xl shadow-tech-sm hover:shadow-[0_0_25px_rgba(6,182,212,0.5)] hover:-translate-y-0.5 transition-all"
               >
-                Schedule Demo
+                Schedule Consultation
               </Link>
               <Link
                 to="/products"
                 className="px-8 py-3.5 text-xs font-bold uppercase tracking-wider text-white border border-white/15 bg-tech-black/60 rounded-xl hover:border-tech-sky hover:bg-white/5 transition-all"
               >
-                Explore Products
+                Products (Will Be Posted Soon)
               </Link>
             </div>
           </div>
@@ -84,7 +84,7 @@ export default function Footer() {
               </Link>
 
               <p className="text-xs text-gray-400 leading-relaxed mb-6 font-sans border-l-2 border-tech-blue/40 pl-3">
-                &gt; Modern cloud orchestration, high-throughput API gateways, and enterprise software engineered for global scale.
+                &gt; Custom web &amp; mobile software engineering, BIR-compliant SaaS solutions, and managed IT services in Tacloban City, Philippines.
               </p>
 
               {/* System Active Status */}
@@ -139,49 +139,31 @@ export default function Footer() {
           {/* Column 2: Products */}
           <div className="flex flex-col">
             <h4 className="text-xs font-mono font-bold text-white uppercase tracking-widest mb-5 border-b border-tech-slate/50 pb-2">
-              // Product Suite
+              // Software Products
             </h4>
             <ul className="list-none space-y-2.5 p-0 m-0">
               <li>
                 <Link
                   to="/products"
-                  className="text-xs text-gray-400 hover:text-tech-sky transition-colors flex items-center gap-1.5"
+                  className="text-xs text-tech-sky hover:underline transition-colors flex items-center gap-1.5 font-mono"
                 >
-                  <i className="fa-solid fa-chevron-right text-[9px] text-tech-sky"></i>
-                  Cloud Orchestrator
+                  <i className="fa-solid fa-clock text-[9px]"></i>
+                  Will Be Posted Soon
                 </Link>
               </li>
               <li>
                 <Link
                   to="/products"
-                  className="text-xs text-gray-400 hover:text-tech-sky transition-colors flex items-center gap-1.5"
+                  className="text-xs text-gray-400 hover:text-white transition-colors flex items-center gap-1.5"
                 >
                   <i className="fa-solid fa-chevron-right text-[9px] text-tech-sky"></i>
-                  Nexus API Gateway
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/products"
-                  className="text-xs text-gray-400 hover:text-tech-sky transition-colors flex items-center gap-1.5"
-                >
-                  <i className="fa-solid fa-chevron-right text-[9px] text-tech-sky"></i>
-                  ShieldOps Cyber
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/products"
-                  className="text-xs text-gray-400 hover:text-tech-sky transition-colors flex items-center gap-1.5"
-                >
-                  <i className="fa-solid fa-chevron-right text-[9px] text-tech-sky"></i>
-                  DataFlow Analytics
+                  Join Early Waitlist
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Navigation & Solutions */}
+          {/* Column 3: Navigation */}
           <div className="flex flex-col">
             <h4 className="text-xs font-mono font-bold text-white uppercase tracking-widest mb-5 border-b border-tech-slate/50 pb-2">
               // Platform Navigation
@@ -202,7 +184,7 @@ export default function Footer() {
                   className="text-xs text-gray-400 hover:text-tech-sky transition-colors flex items-center gap-1.5"
                 >
                   <i className="fa-solid fa-chevron-right text-[9px] text-tech-sky"></i>
-                  Enterprise Products
+                  Software Products
                 </Link>
               </li>
               <li>
@@ -220,7 +202,7 @@ export default function Footer() {
                   className="text-xs text-gray-400 hover:text-tech-sky transition-colors flex items-center gap-1.5"
                 >
                   <i className="fa-solid fa-chevron-right text-[9px] text-tech-sky"></i>
-                  About &amp; Manifesto
+                  About Us
                 </Link>
               </li>
               <li>
@@ -242,7 +224,7 @@ export default function Footer() {
                 // Tech Dispatch
               </h4>
               <p className="text-xs text-gray-400 mb-4 leading-relaxed font-sans">
-                Subscribe for technical dispatches, system architecture insights, and major release notes.
+                Subscribe for technical dispatches, system architecture insights, and major product release notes.
               </p>
 
               {subscribed ? (
@@ -279,13 +261,13 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar: Copyright & Compliance */}
+        {/* Bottom Bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-sans text-gray-500">
           <div className="flex items-center gap-4 flex-wrap text-center md:text-left">
             <span>© 2026 Orientis Digital: Unified Tech Solutions_</span>
             <span className="hidden md:inline text-gray-700">|</span>
             <span className="inline-flex items-center gap-1.5 font-mono text-[11px] text-gray-400">
-              <i className="fa-solid fa-shield-cat text-tech-sky"></i> SOC2 Type II &amp; ISO 27001 Compliant
+              <i className="fa-solid fa-shield-cat text-tech-sky"></i> Tacloban City, Leyte, Philippines
             </span>
           </div>
 

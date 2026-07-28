@@ -1,21 +1,8 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null); // null | 'products' | 'solutions'
-  const timeoutRef = useRef(null);
-
-  const handleMouseEnter = (name) => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    setActiveDropdown(name);
-  };
-
-  const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => {
-      setActiveDropdown(null);
-    }, 150);
-  };
 
   const linkBaseStyle =
     "text-xs font-bold tracking-widest transition-colors py-2 px-1 flex items-center gap-1.5 uppercase cursor-pointer";
@@ -29,10 +16,7 @@ export default function Header() {
         <Link
           to="/"
           className="flex items-center gap-3 no-underline relative z-[1002] group"
-          onClick={() => {
-            setOpen(false);
-            setActiveDropdown(null);
-          }}
+          onClick={() => setOpen(false)}
         >
           <div className="relative w-11 h-11 flex items-center justify-center rounded-xl bg-tech-blue/10 border border-tech-blue/20 group-hover:border-tech-sky/50 transition-all duration-300">
             <img
@@ -62,97 +46,19 @@ export default function Header() {
                 to="/"
                 end
                 className={({ isActive }) => (isActive ? activeStyle : inactiveStyle)}
-                onClick={() => setActiveDropdown(null)}
               >
                 Home
               </NavLink>
             </li>
 
-            {/* Products Page & Dropdown */}
-            <li
-              className="relative"
-              onMouseEnter={() => handleMouseEnter('products')}
-              onMouseLeave={handleMouseLeave}
-            >
+            {/* Products Page */}
+            <li>
               <NavLink
                 to="/products"
                 className={({ isActive }) => (isActive ? activeStyle : inactiveStyle)}
-                onClick={() => setActiveDropdown(null)}
               >
                 Products
-                <i
-                  className={`fa-solid fa-chevron-down text-[10px] transition-transform duration-200 ${
-                    activeDropdown === 'products' ? 'rotate-180 text-tech-sky' : ''
-                  }`}
-                ></i>
               </NavLink>
-
-              {activeDropdown === 'products' && (
-                <div
-                  className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[420px] glass-panel bg-tech-black/95 backdrop-blur-2xl p-5 rounded-2xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.8)] grid grid-cols-2 gap-3 transition-all duration-200"
-                  onMouseEnter={() => handleMouseEnter('products')}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <Link
-                    to="/products"
-                    className="p-3 rounded-xl hover:bg-white/5 border border-transparent hover:border-tech-sky/20 transition-all group/item"
-                    onClick={() => setActiveDropdown(null)}
-                  >
-                    <div className="flex items-center gap-2 mb-1">
-                      <i className="fa-solid fa-server text-tech-sky text-sm group-hover/item:scale-110 transition-transform"></i>
-                      <span className="text-xs font-bold text-white group-hover/item:text-tech-sky transition-colors">
-                        Cloud Orchestrator
-                      </span>
-                    </div>
-                    <p className="text-[11px] text-gray-400 font-sans leading-tight">
-                      Multi-cloud deployment engine.
-                    </p>
-                  </Link>
-
-                  <Link
-                    to="/products"
-                    className="p-3 rounded-xl hover:bg-white/5 border border-transparent hover:border-tech-indigo/20 transition-all group/item"
-                    onClick={() => setActiveDropdown(null)}
-                  >
-                    <div className="flex items-center gap-2 mb-1">
-                      <i className="fa-solid fa-network-wired text-tech-indigo text-sm group-hover/item:scale-110 transition-transform"></i>
-                      <span className="text-xs font-bold text-white group-hover/item:text-tech-indigo transition-colors">
-                        Nexus Gateway
-                      </span>
-                    </div>
-                    <p className="text-[11px] text-gray-400 font-sans leading-tight">
-                      High-throughput API proxy.
-                    </p>
-                  </Link>
-
-                  <Link
-                    to="/products"
-                    className="p-3 rounded-xl hover:bg-white/5 border border-transparent hover:border-cyan-400/20 transition-all group/item"
-                    onClick={() => setActiveDropdown(null)}
-                  >
-                    <div className="flex items-center gap-2 mb-1">
-                      <i className="fa-solid fa-shield-halved text-cyan-400 text-sm group-hover/item:scale-110 transition-transform"></i>
-                      <span className="text-xs font-bold text-white group-hover/item:text-cyan-400 transition-colors">
-                        ShieldOps Cyber
-                      </span>
-                    </div>
-                    <p className="text-[11px] text-gray-400 font-sans leading-tight">
-                      AI threat detection &amp; audit.
-                    </p>
-                  </Link>
-
-                  <Link
-                    to="/products"
-                    className="p-3 rounded-xl bg-tech-blue/10 border border-tech-blue/20 hover:border-tech-blue/40 transition-all group/item flex flex-col justify-center"
-                    onClick={() => setActiveDropdown(null)}
-                  >
-                    <span className="text-xs font-bold text-tech-sky uppercase tracking-wider group-hover/item:underline flex items-center gap-1">
-                      View Suite <i className="fa-solid fa-arrow-right text-[10px]"></i>
-                    </span>
-                    <p className="text-[10px] text-gray-400 mt-1">Explore all products &gt;</p>
-                  </Link>
-                </div>
-              )}
             </li>
 
             {/* Solutions Page */}
@@ -160,7 +66,6 @@ export default function Header() {
               <NavLink
                 to="/solutions"
                 className={({ isActive }) => (isActive ? activeStyle : inactiveStyle)}
-                onClick={() => setActiveDropdown(null)}
               >
                 Solutions
               </NavLink>
@@ -171,7 +76,6 @@ export default function Header() {
               <NavLink
                 to="/about"
                 className={({ isActive }) => (isActive ? activeStyle : inactiveStyle)}
-                onClick={() => setActiveDropdown(null)}
               >
                 About
               </NavLink>
@@ -182,7 +86,6 @@ export default function Header() {
               <NavLink
                 to="/contact"
                 className={({ isActive }) => (isActive ? activeStyle : inactiveStyle)}
-                onClick={() => setActiveDropdown(null)}
               >
                 Contact
               </NavLink>
@@ -190,7 +93,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* Right Header Controls: Live System Status & CTA Button */}
+        {/* Right Header Controls */}
         <div className="hidden lg:flex items-center gap-5">
           {/* Active Status Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/5 text-emerald-400 text-[11px] font-mono uppercase tracking-wider">

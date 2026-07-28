@@ -1,55 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Typewriter from '../components/Typewriter';
 
-const terminalTabs = [
-  {
-    id: 'orientpos',
-    title: 'orientpos setup',
-    command: 'orientpos setup --terminal pos-01 --branch tacloban-main --preview',
-    output: [
-      '✔ Initializing OrientPOS v2.4 (Tacloban Main Branch)...',
-      '✔ Loading offline transaction cache & receipt engine...',
-      '✔ GCash & Maya QR integration online...',
-      '🚀 POS Active — BIR tax compliant mode enabled (Launching Soon).'
-    ]
-  },
-  {
-    id: 'orientinventory',
-    title: 'orientinventory sync',
-    command: 'orientinventory sync --warehouse central-01 --preview',
-    output: [
-      '✔ Connected to OrientInventory Mobile Scanner...',
-      '✔ SKUs verified across multi-location stores...',
-      '✔ Automated low-stock SMS alert triggers active...',
-      '⚡ Inventory sync complete (Launching Soon).'
-    ]
-  },
-  {
-    id: 'orienthr',
-    title: 'orienthr payroll',
-    command: 'orienthr payroll compute --month 07 --year 2026 --statutory-ph',
-    output: [
-      '✔ Processing Philippine statutory payroll rules...',
-      '✔ SSS, PhilHealth, Pag-IBIG & 13th month auto-calculated...',
-      '✔ Generated PDF payslips in secure document vault...',
-      '🛡️ Payroll execution completed (Launching Soon).'
-    ]
-  }
-];
-
 export default function Home() {
-  const [activeTermTab, setActiveTermTab] = useState('orientpos');
-  const [copied, setCopied] = useState(false);
-
-  const currentTab = terminalTabs.find((t) => t.id === activeTermTab);
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(currentTab.command);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
   return (
     <main className="flex-1">
       {/* 1. Hero Section */}
@@ -81,7 +34,7 @@ export default function Home() {
           <Typewriter />
 
           <p className="max-w-[680px] mx-auto mb-12 text-sm md:text-[1.05rem] leading-relaxed text-gray-400 border border-white/5 p-6 bg-tech-gray/45 backdrop-blur-md rounded-2xl font-sans shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-            &gt; Orientis Digital delivers custom web/mobile applications, BIR-compliant SaaS tools (OrientPOS, OrientInventory, OrientHR - Launching Soon), and managed IT services for MSMEs, enterprises, and government agencies.
+            &gt; Orientis Digital delivers custom web/mobile software applications, BIR-compliant SaaS tools, and managed IT infrastructure for MSMEs, enterprises, and government agencies.
           </p>
 
           <div className="flex gap-5 justify-center flex-wrap">
@@ -89,7 +42,7 @@ export default function Home() {
               to="/products"
               className="inline-block px-10 py-4 font-bold transition-all duration-200 text-sm md:text-base bg-gradient-to-r from-tech-blue to-tech-indigo text-white border-0 hover:shadow-tech hover:-translate-y-0.5 shadow-tech-sm uppercase tracking-wider rounded-xl"
             >
-              SaaS Products (Will Be Posted Soon)
+              Products (Will Be Posted Soon)
             </Link>
             <Link
               to="/solutions"
@@ -131,10 +84,10 @@ export default function Home() {
                 <i className="fa-solid fa-receipt"></i>
               </div>
               <h3 className="text-lg font-bold text-white mb-2 group-hover:text-tech-indigo transition-colors">
-                BIR-Compliant SaaS
+                BIR-Compliant Software
               </h3>
               <p className="text-xs text-gray-400 leading-relaxed font-sans">
-                Affordable software products optimized for Philippine tax regulations, statutory contributions, and local payment gateways.
+                Affordable software tools optimized for Philippine tax regulations, statutory contributions, and local payment gateways.
               </p>
             </div>
 
@@ -165,171 +118,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. Featured Software Products */}
+      {/* 3. Products Status Banner Section */}
       <section className="py-20 bg-tech-gray/30 border-t border-white/5 relative z-20">
-        <div className="container mx-auto px-[5%] max-w-[1280px]">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-            <div>
-              <span className="text-tech-indigo text-xs font-mono font-bold uppercase tracking-widest block mb-2">
-                // Products Will Be Posted Soon
-              </span>
-              <h2 className="text-3xl font-extrabold text-white uppercase">
-                Upcoming Software Products
-              </h2>
-            </div>
+        <div className="container mx-auto px-[5%] max-w-[1000px] text-center">
+          <div className="glass-panel p-10 md:p-14 rounded-3xl border border-white/10 relative overflow-hidden">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-tech-indigo/30 bg-tech-indigo/10 text-tech-indigo text-xs font-mono uppercase tracking-widest mb-4">
+              <i className="fa-solid fa-clock"></i> Products Will Be Posted Soon
+            </span>
+
+            <h2 className="text-3xl font-extrabold text-white uppercase mb-4">
+              Software Products Suite
+            </h2>
+
+            <p className="text-gray-400 text-sm max-w-[600px] mx-auto mb-8 font-sans leading-relaxed">
+              Our software products catalog and subscription packages will be posted soon. Join our early waitlist to be notified when products go live.
+            </p>
+
             <Link
               to="/products"
-              className="text-xs font-bold text-tech-sky hover:text-white uppercase tracking-wider flex items-center gap-1.5"
+              className="inline-block px-8 py-3.5 font-bold text-xs uppercase tracking-wider text-white bg-gradient-to-r from-tech-blue to-tech-indigo rounded-xl shadow-tech-sm hover:opacity-90 transition-all"
             >
-              View Upcoming Suite <i className="fa-solid fa-arrow-right text-[10px]"></i>
+              Learn More &amp; Join Waitlist &gt;
             </Link>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-tech-sky/40 transition-all group flex flex-col justify-between">
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-tech-blue/10 border border-tech-blue/20 flex items-center justify-center text-tech-sky text-xl group-hover:scale-110 transition-transform">
-                    <i className="fa-solid fa-cash-register"></i>
-                  </div>
-                  <span className="text-[10px] font-mono text-tech-indigo border border-tech-indigo/30 bg-tech-indigo/10 px-2 py-0.5 rounded-full">
-                    Will Be Posted Soon
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-tech-sky transition-colors">
-                  OrientPOS
-                </h3>
-                <p className="text-xs text-gray-400 leading-relaxed font-sans">
-                  BIR-compliant Point of Sale with offline mode, thermal receipts, and GCash/Maya support.
-                </p>
-              </div>
-              <Link
-                to="/products"
-                className="mt-6 inline-flex items-center gap-1 text-xs font-bold text-tech-sky hover:underline uppercase tracking-wider"
-              >
-                Preview Specs &gt;
-              </Link>
-            </div>
-
-            <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-tech-indigo/40 transition-all group flex flex-col justify-between">
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-tech-indigo/10 border border-tech-indigo/20 flex items-center justify-center text-tech-indigo text-xl group-hover:scale-110 transition-transform">
-                    <i className="fa-solid fa-boxes-stacked"></i>
-                  </div>
-                  <span className="text-[10px] font-mono text-tech-indigo border border-tech-indigo/30 bg-tech-indigo/10 px-2 py-0.5 rounded-full">
-                    Will Be Posted Soon
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-tech-indigo transition-colors">
-                  OrientInventory
-                </h3>
-                <p className="text-xs text-gray-400 leading-relaxed font-sans">
-                  Barcode stock tracking, automated low-stock alerts, and multi-location warehouse management.
-                </p>
-              </div>
-              <Link
-                to="/products"
-                className="mt-6 inline-flex items-center gap-1 text-xs font-bold text-tech-indigo hover:underline uppercase tracking-wider"
-              >
-                Preview Specs &gt;
-              </Link>
-            </div>
-
-            <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-cyan-400/40 transition-all group flex flex-col justify-between">
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 text-xl group-hover:scale-110 transition-transform">
-                    <i className="fa-solid fa-users-gear"></i>
-                  </div>
-                  <span className="text-[10px] font-mono text-tech-indigo border border-tech-indigo/30 bg-tech-indigo/10 px-2 py-0.5 rounded-full">
-                    Will Be Posted Soon
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                  OrientHR
-                </h3>
-                <p className="text-xs text-gray-400 leading-relaxed font-sans">
-                  Automated PH payroll, SSS/PhilHealth/Pag-IBIG contribution computing, and PDF payslips.
-                </p>
-              </div>
-              <Link
-                to="/products"
-                className="mt-6 inline-flex items-center gap-1 text-xs font-bold text-cyan-400 hover:underline uppercase tracking-wider"
-              >
-                Preview Specs &gt;
-              </Link>
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* 4. Interactive CLI & Product Demo Terminal */}
-      <section className="py-24 bg-tech-black border-t border-white/5 relative overflow-hidden">
-        <div className="container mx-auto px-[5%] max-w-[1000px]">
-          <div className="text-center mb-12">
-            <span className="text-tech-sky text-xs font-mono font-bold uppercase tracking-widest block mb-2">
-              // Unified System Commands Preview
-            </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white uppercase">
-              Control &amp; Automate Orientis Software
-            </h2>
-          </div>
-
-          <div className="glass-panel rounded-3xl border border-white/15 overflow-hidden shadow-2xl bg-tech-black/90">
-            <div className="bg-tech-gray/90 px-6 py-4 border-b border-white/10 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <span className="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
-                <span className="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
-                <span className="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
-                <span className="text-xs font-mono text-gray-400 ml-2">orientis-sys ~ bash</span>
-              </div>
-
-              <div className="flex gap-2">
-                {terminalTabs.map((t) => (
-                  <button
-                    key={t.id}
-                    onClick={() => setActiveTermTab(t.id)}
-                    className={`px-3 py-1 rounded-lg text-xs font-mono transition-colors cursor-pointer ${
-                      activeTermTab === t.id
-                        ? 'bg-tech-blue/20 text-tech-sky border border-tech-blue/40'
-                        : 'text-gray-400 hover:text-white'
-                    }`}
-                  >
-                    {t.title}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="p-6 font-mono text-xs md:text-sm">
-              <div className="flex items-center justify-between mb-4 pb-3 border-b border-white/5">
-                <div className="flex items-center gap-2 text-tech-sky">
-                  <span className="text-tech-indigo">&gt;</span>
-                  <span className="text-white font-semibold">{currentTab.command}</span>
-                </div>
-                <button
-                  onClick={handleCopy}
-                  className="text-xs text-gray-400 hover:text-white flex items-center gap-1 cursor-pointer bg-white/5 px-2.5 py-1 rounded-md border border-white/10"
-                >
-                  <i className="fa-regular fa-copy"></i>
-                  {copied ? 'Copied!' : 'Copy'}
-                </button>
-              </div>
-
-              <div className="space-y-2 text-gray-400">
-                {currentTab.output.map((line, idx) => (
-                  <p key={idx} className="leading-relaxed">
-                    {line}
-                  </p>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. How We Work */}
+      {/* 4. How We Work */}
       <section className="py-24 bg-tech-gray/20 border-t border-white/5 relative">
         <div className="container mx-auto px-[5%] max-w-[1280px]">
           <div className="text-center mb-16">
@@ -362,7 +177,7 @@ export default function Home() {
                 Deploy &amp; Integrate
               </h3>
               <p className="text-xs text-gray-400 leading-relaxed font-sans">
-                Deploy Orientis SaaS products or build custom web/mobile solutions tailored specifically to your operational goals.
+                Deploy Orientis software solutions or build custom web/mobile systems tailored specifically to your operational goals.
               </p>
             </div>
 
@@ -381,7 +196,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. Core Tech Stack Section */}
+      {/* 5. Core Tech Stack Section */}
       <section className="py-20 bg-tech-black/50 border-t border-white/5 relative overflow-hidden">
         <div className="container mx-auto px-[5%] max-w-[1200px]">
           <div className="text-center mb-12">
@@ -428,7 +243,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. Quote Section */}
+      {/* 6. Quote Section */}
       <section className="py-28 bg-tech-black relative overflow-hidden border-t border-tech-blue/10">
         <div className="absolute top-1/2 left-1/2 w-[800px] h-[400px] bg-tech-indigo/10 -translate-x-1/2 -translate-y-1/2 blur-[100px] -z-10 animate-pulse"></div>
 
@@ -440,7 +255,7 @@ export default function Home() {
               "Building Digital Futures,<br />One Business at a <span className="bg-gradient-to-r from-tech-sky via-cyan-400 to-tech-indigo bg-clip-text text-transparent">Time</span>."
             </h2>
             <p className="mt-6 text-[1.05rem] text-gray-400 leading-relaxed max-w-[650px] mx-auto font-sans">
-              &gt; Partner with Tacloban's full-service IT team for custom web applications, mobile solutions, and BIR-compliant SaaS software.
+              &gt; Partner with Tacloban's full-service IT team for custom web applications, mobile solutions, and BIR-compliant software.
             </p>
             <div className="mt-12">
               <Link
