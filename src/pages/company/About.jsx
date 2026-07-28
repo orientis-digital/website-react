@@ -1,6 +1,65 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const teamMembers = [
+  {
+    name: 'Daemian Tingson',
+    role: 'Founder',
+    badge: 'Founder & Leadership',
+    initials: 'DT',
+    icon: 'fa-solid fa-user-tie',
+    bio: 'Founder leading strategic vision, executive direction, and digital transformation initiatives across Eastern Visayas.',
+    skills: ['Digital Strategy', 'Executive Leadership', 'Business Development'],
+    social: {
+      linkedin: 'https://linkedin.com',
+      github: 'https://github.com',
+      email: 'mailto:daemian@orientisdigital.com',
+    },
+  },
+  {
+    name: 'Joseph Degorio',
+    role: 'Co-Founder',
+    badge: 'Co-Founder & Operations',
+    initials: 'JD',
+    icon: 'fa-solid fa-user-gear',
+    bio: 'Co-Founder driving operational excellence, strategic partnerships, and regional growth.',
+    skills: ['Business Operations', 'Strategic Partnerships', 'Product Management'],
+    social: {
+      linkedin: 'https://linkedin.com',
+      github: 'https://github.com',
+      email: 'mailto:joseph@orientisdigital.com',
+    },
+  },
+  {
+    name: 'Sean Lloyd Harold Raquel',
+    role: 'IT Consultant / Developer',
+    badge: 'IT Consulting & Engineering',
+    initials: 'SLHR',
+    icon: 'fa-solid fa-laptop-code',
+    bio: 'IT Consultant and Full-Stack Developer specializing in custom software solutions, system architecture, and cloud engineering.',
+    skills: ['Full-Stack Dev', 'System Architecture', 'Cloud Engineering'],
+    social: {
+      linkedin: 'https://linkedin.com',
+      github: 'https://github.com',
+      email: 'mailto:sean@orientisdigital.com',
+    },
+  },
+  {
+    name: 'Clarence Yao',
+    role: 'IT Consultant / Developer',
+    badge: 'IT Consulting & Development',
+    initials: 'CY',
+    icon: 'fa-solid fa-code',
+    bio: 'IT Consultant and Developer specializing in custom software solutions, enterprise system integration, and IT infrastructure.',
+    skills: ['IT Consulting', 'Software Engineering', 'System Integration'],
+    social: {
+      linkedin: 'https://linkedin.com',
+      github: 'https://github.com',
+      email: 'mailto:clarence@orientisdigital.com',
+    },
+  },
+];
+
 export default function About() {
   return (
     <main className="flex-1 pt-28 pb-24">
@@ -234,6 +293,116 @@ export default function About() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Meet the Team Section */}
+          <div className="mb-24">
+            <div className="text-center mb-12">
+              <span className="text-tech-sky text-xs font-mono font-bold uppercase tracking-widest block mb-2">
+                // The People Behind The Technology
+              </span>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-white uppercase mb-4">
+                Meet the Team
+              </h2>
+              <p className="max-w-2xl mx-auto text-gray-300 text-sm md:text-base font-sans leading-relaxed">
+                Our team of passionate engineers, designers, and IT strategists in Tacloban City are dedicated to delivering world-class digital solutions for Eastern Visayas.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {teamMembers.map((member) => (
+                <div
+                  key={member.name}
+                  className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-tech-sky/40 transition-all flex flex-col justify-between group"
+                >
+                  <div>
+                    {/* Member Image / Portrait Placeholder */}
+                    <div className="relative mb-5 overflow-hidden rounded-xl aspect-square border border-dashed border-white/20 bg-gradient-to-br from-tech-slate/70 via-tech-black/90 to-tech-gray/80 flex flex-col items-center justify-center text-center p-4 group-hover:border-tech-sky/50 transition-all">
+                      {member.image ? (
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      ) : (
+                        <>
+                          <div className="w-16 h-16 rounded-2xl bg-tech-blue/10 border border-tech-blue/30 flex items-center justify-center text-tech-sky text-2xl mb-2 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all">
+                            <i className={member.icon || 'fa-solid fa-user'}></i>
+                          </div>
+                          <span className="text-[11px] font-mono font-bold text-white tracking-widest uppercase mb-0.5">
+                            {member.initials}
+                          </span>
+                          <span className="text-[9px] font-mono text-tech-sky/70 uppercase tracking-wider">
+                            Portrait Placeholder
+                          </span>
+                        </>
+                      )}
+                      <span className="absolute bottom-3 left-3 px-2.5 py-1 rounded-md bg-tech-black/80 backdrop-blur-md border border-white/10 text-tech-sky text-[10px] font-mono font-semibold uppercase tracking-wider">
+                        {member.badge}
+                      </span>
+                    </div>
+
+                    <h3 className="text-lg font-extrabold text-white group-hover:text-tech-sky transition-colors mb-0.5">
+                      {member.name}
+                    </h3>
+                    <p className="text-xs font-mono text-tech-indigo mb-3">
+                      {member.role}
+                    </p>
+                    <p className="text-xs text-gray-400 font-sans leading-relaxed mb-4">
+                      {member.bio}
+                    </p>
+                  </div>
+
+                  <div>
+                    {/* Skill Badges */}
+                    <div className="flex flex-wrap gap-1.5 mb-5">
+                      {member.skills.map((skill) => (
+                        <span
+                          key={skill}
+                          className="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] font-mono text-gray-300"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Social Links */}
+                    <div className="pt-3 border-t border-white/10 flex items-center justify-between">
+                      <span className="text-[11px] font-mono text-gray-400 uppercase tracking-wider">
+                        Connect
+                      </span>
+                      <div className="flex items-center gap-3">
+                        <a
+                          href={member.social.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${member.name} LinkedIn`}
+                          className="text-gray-400 hover:text-tech-sky text-sm transition-colors"
+                        >
+                          <i className="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a
+                          href={member.social.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${member.name} GitHub`}
+                          className="text-gray-400 hover:text-tech-sky text-sm transition-colors"
+                        >
+                          <i className="fa-brands fa-github"></i>
+                        </a>
+                        <a
+                          href={member.social.email}
+                          aria-label={`Email ${member.name}`}
+                          className="text-gray-400 hover:text-tech-indigo text-sm transition-colors"
+                        >
+                          <i className="fa-solid fa-envelope"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
