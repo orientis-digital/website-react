@@ -6,23 +6,23 @@ const terminalTabs = [
   {
     id: 'orientpos',
     title: 'orientpos setup',
-    command: 'orientpos setup --terminal pos-01 --branch tacloban-main --bir-mode',
+    command: 'orientpos setup --terminal pos-01 --branch tacloban-main --preview',
     output: [
       '✔ Initializing OrientPOS v2.4 (Tacloban Main Branch)...',
       '✔ Loading offline transaction cache & receipt engine...',
       '✔ GCash & Maya QR integration online...',
-      '🚀 POS Active — BIR tax compliant mode enabled.'
+      '🚀 POS Active — BIR tax compliant mode enabled (Launching Soon).'
     ]
   },
   {
     id: 'orientinventory',
     title: 'orientinventory sync',
-    command: 'orientinventory sync --warehouse central-01 --auto-reorder',
+    command: 'orientinventory sync --warehouse central-01 --preview',
     output: [
       '✔ Connected to OrientInventory Mobile Scanner...',
-      '✔ 1,420 SKUs verified across multi-location stores...',
+      '✔ SKUs verified across multi-location stores...',
       '✔ Automated low-stock SMS alert triggers active...',
-      '⚡ Inventory sync complete with 0 discrepancy.'
+      '⚡ Inventory sync complete (Launching Soon).'
     ]
   },
   {
@@ -32,8 +32,8 @@ const terminalTabs = [
     output: [
       '✔ Processing Philippine statutory payroll rules...',
       '✔ SSS, PhilHealth, Pag-IBIG & 13th month auto-calculated...',
-      '✔ Generated 48 PDF payslips in secure document vault...',
-      '🛡️ Payroll execution completed cleanly.'
+      '✔ Generated PDF payslips in secure document vault...',
+      '🛡️ Payroll execution completed (Launching Soon).'
     ]
   }
 ];
@@ -81,7 +81,7 @@ export default function Home() {
           <Typewriter />
 
           <p className="max-w-[680px] mx-auto mb-12 text-sm md:text-[1.05rem] leading-relaxed text-gray-400 border border-white/5 p-6 bg-tech-gray/45 backdrop-blur-md rounded-2xl font-sans shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-            &gt; Orientis Digital delivers BIR-compliant SaaS software (OrientPOS, OrientInventory, OrientHR), custom web/mobile applications, and managed IT services for MSMEs, enterprises, and government agencies.
+            &gt; Orientis Digital delivers custom web/mobile applications, BIR-compliant SaaS tools (OrientPOS, OrientInventory, OrientHR - Launching Soon), and managed IT services for MSMEs, enterprises, and government agencies.
           </p>
 
           <div className="flex gap-5 justify-center flex-wrap">
@@ -89,7 +89,7 @@ export default function Home() {
               to="/products"
               className="inline-block px-10 py-4 font-bold transition-all duration-200 text-sm md:text-base bg-gradient-to-r from-tech-blue to-tech-indigo text-white border-0 hover:shadow-tech hover:-translate-y-0.5 shadow-tech-sm uppercase tracking-wider rounded-xl"
             >
-              Explore SaaS Products
+              SaaS Products (Will Be Posted Soon)
             </Link>
             <Link
               to="/solutions"
@@ -170,26 +170,31 @@ export default function Home() {
         <div className="container mx-auto px-[5%] max-w-[1280px]">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
-              <span className="text-tech-sky text-xs font-mono font-bold uppercase tracking-widest block mb-2">
-                // SaaS Product Suite
+              <span className="text-tech-indigo text-xs font-mono font-bold uppercase tracking-widest block mb-2">
+                // Products Will Be Posted Soon
               </span>
               <h2 className="text-3xl font-extrabold text-white uppercase">
-                Featured Orientis Software
+                Upcoming Software Products
               </h2>
             </div>
             <Link
               to="/products"
               className="text-xs font-bold text-tech-sky hover:text-white uppercase tracking-wider flex items-center gap-1.5"
             >
-              View Full Portfolio <i className="fa-solid fa-arrow-right text-[10px]"></i>
+              View Upcoming Suite <i className="fa-solid fa-arrow-right text-[10px]"></i>
             </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-tech-sky/40 transition-all group flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-xl bg-tech-blue/10 border border-tech-blue/20 flex items-center justify-center text-tech-sky text-xl mb-4 group-hover:scale-110 transition-transform">
-                  <i className="fa-solid fa-cash-register"></i>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-tech-blue/10 border border-tech-blue/20 flex items-center justify-center text-tech-sky text-xl group-hover:scale-110 transition-transform">
+                    <i className="fa-solid fa-cash-register"></i>
+                  </div>
+                  <span className="text-[10px] font-mono text-tech-indigo border border-tech-indigo/30 bg-tech-indigo/10 px-2 py-0.5 rounded-full">
+                    Will Be Posted Soon
+                  </span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-tech-sky transition-colors">
                   OrientPOS
@@ -202,14 +207,19 @@ export default function Home() {
                 to="/products"
                 className="mt-6 inline-flex items-center gap-1 text-xs font-bold text-tech-sky hover:underline uppercase tracking-wider"
               >
-                Learn More &gt;
+                Preview Specs &gt;
               </Link>
             </div>
 
             <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-tech-indigo/40 transition-all group flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-xl bg-tech-indigo/10 border border-tech-indigo/20 flex items-center justify-center text-tech-indigo text-xl mb-4 group-hover:scale-110 transition-transform">
-                  <i className="fa-solid fa-boxes-stacked"></i>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-tech-indigo/10 border border-tech-indigo/20 flex items-center justify-center text-tech-indigo text-xl group-hover:scale-110 transition-transform">
+                    <i className="fa-solid fa-boxes-stacked"></i>
+                  </div>
+                  <span className="text-[10px] font-mono text-tech-indigo border border-tech-indigo/30 bg-tech-indigo/10 px-2 py-0.5 rounded-full">
+                    Will Be Posted Soon
+                  </span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-tech-indigo transition-colors">
                   OrientInventory
@@ -222,14 +232,19 @@ export default function Home() {
                 to="/products"
                 className="mt-6 inline-flex items-center gap-1 text-xs font-bold text-tech-indigo hover:underline uppercase tracking-wider"
               >
-                Learn More &gt;
+                Preview Specs &gt;
               </Link>
             </div>
 
             <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-cyan-400/40 transition-all group flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 text-xl mb-4 group-hover:scale-110 transition-transform">
-                  <i className="fa-solid fa-users-gear"></i>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 text-xl group-hover:scale-110 transition-transform">
+                    <i className="fa-solid fa-users-gear"></i>
+                  </div>
+                  <span className="text-[10px] font-mono text-tech-indigo border border-tech-indigo/30 bg-tech-indigo/10 px-2 py-0.5 rounded-full">
+                    Will Be Posted Soon
+                  </span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                   OrientHR
@@ -242,7 +257,7 @@ export default function Home() {
                 to="/products"
                 className="mt-6 inline-flex items-center gap-1 text-xs font-bold text-cyan-400 hover:underline uppercase tracking-wider"
               >
-                Learn More &gt;
+                Preview Specs &gt;
               </Link>
             </div>
           </div>
@@ -254,7 +269,7 @@ export default function Home() {
         <div className="container mx-auto px-[5%] max-w-[1000px]">
           <div className="text-center mb-12">
             <span className="text-tech-sky text-xs font-mono font-bold uppercase tracking-widest block mb-2">
-              // Unified System Commands
+              // Unified System Commands Preview
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-white uppercase">
               Control &amp; Automate Orientis Software
