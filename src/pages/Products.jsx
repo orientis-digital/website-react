@@ -3,80 +3,103 @@ import { Link } from 'react-router-dom';
 
 const productsData = [
   {
-    id: 'cloud-orchestrator',
-    name: 'Orientis Cloud Orchestrator',
-    tagline: 'Automated Multi-Cloud Infrastructure & Deployment Platform',
-    category: 'cloud',
-    badge: 'Production Ready',
-    icon: 'fa-solid fa-server',
+    id: 'orientpos',
+    name: 'OrientPOS',
+    tagline: 'BIR-Compliant Point of Sale & Retail Management System',
+    category: 'retail',
+    badge: 'Flagship SaaS',
+    icon: 'fa-solid fa-cash-register',
     accentColor: 'from-tech-sky to-blue-500',
     borderColor: 'hover:border-tech-sky/40',
     description:
-      'Engineered for mission-critical Kubernetes and serverless environments. Provision, scale, and manage workloads across AWS, GCP, and Azure from a single unified control plane.',
+      'Engineered for restaurants, retail shops, salons, and service businesses. Features offline mode transaction processing, BIR compliance readiness, GCash/Maya payment integrations, thermal receipt printing, and daily automated sales reporting.',
     features: [
-      'Multi-cloud Kubernetes cluster management',
-      'Zero-downtime canary & blue/green deployments',
-      'Automated disaster recovery & failover',
-      'Cost optimization & resource auto-tuning'
+      'Offline mode transaction syncing',
+      'BIR compliance & tax invoice formatting',
+      'GCash, Maya, & Cash payment processing',
+      'Thermal receipt printer & cash drawer support',
+      'Multi-branch shift tracking & stock-in/out'
     ],
-    codeSnippet: 'orientis deploy --env production --cluster aws-east-1 --canary 10%'
+    codeSnippet: 'orientpos setup --terminal pos-01 --branch tacloban-main --bir-mode'
   },
   {
-    id: 'nexus-gateway',
-    name: 'Nexus API Gateway',
-    tagline: 'High-Throughput Edge Proxy & Rate Limiter',
-    category: 'security',
-    badge: 'Enterprise Platform',
-    icon: 'fa-solid fa-network-wired',
+    id: 'orientinventory',
+    name: 'OrientInventory',
+    tagline: 'Multi-Location Stock & Supply Chain Management',
+    category: 'retail',
+    badge: 'Inventory Suite',
+    icon: 'fa-solid fa-[#2496ED] fa-boxes-stacked',
     accentColor: 'from-tech-indigo to-orange-500',
     borderColor: 'hover:border-tech-indigo/40',
     description:
-      'Ultra-fast API gateway handling requests with built-in OAuth2/JWT validation, dynamic rate limiting, and real-time distributed tracing.',
+      'Eliminate stockouts and spreadsheet errors with barcode/QR code scanning, real-time stock movement recording, automated low-stock alerts, purchase order management, and seamless OrientPOS integration.',
     features: [
-      'Sub-millisecond routing proxy',
-      'Adaptive DDoS & bot mitigation',
-      'GraphQL & gRPC native protocol support',
-      'Automated OpenAPI specification generation'
+      'Barcode & QR code mobile scanner integration',
+      'Multi-warehouse stock transfer tracking',
+      'Automated low-stock SMS & email alerts',
+      'Expiry date & batch lot management',
+      'Purchase order & supplier database'
     ],
-    codeSnippet: 'nexus gateway proxy --target api.orientis.tech --rate-limit adaptive'
+    codeSnippet: 'orientinventory sync --location warehouse-01 --auto-reorder'
   },
   {
-    id: 'shieldops-sec',
-    name: 'ShieldOps Cyber Monitor',
-    tagline: 'AI-Driven Threat Detection & Incident Response Platform',
-    category: 'security',
-    badge: 'Security Engine',
-    icon: 'fa-solid fa-shield-halved',
+    id: 'orienthr',
+    name: 'OrientHR',
+    tagline: 'Philippine HR & Automated Payroll Platform',
+    category: 'hr',
+    badge: 'PH HR Compliant',
+    icon: 'fa-solid fa-users-gear',
     accentColor: 'from-cyan-400 to-tech-sky',
     borderColor: 'hover:border-cyan-400/40',
     description:
-      'Continuous automated security audits, vulnerability scanning, and real-time threat neutralization across cloud workloads and edge endpoints.',
+      'Streamline workforce management with automated payroll processing, employee self-service portals, biometric attendance integration, and automatic statutory deduction calculations (SSS, PhilHealth, Pag-IBIG, & 13th Month Pay).',
     features: [
-      'Real-time anomaly detection with LLM analysis',
-      'Automated vulnerability patch application',
-      'SOC2 & ISO 27001 compliance enforcement',
-      'Encrypted log telemetry storage'
+      'Automated SSS, PhilHealth, & Pag-IBIG deduction computing',
+      'PDF payslip generation & 13th Month calculation',
+      'Biometric clock-in & leave request portal',
+      'Employee contract & digital document vault',
+      'Shift scheduling & overtime approvals'
     ],
-    codeSnippet: 'shieldops audit --scope cloud-infra --auto-remediate'
+    codeSnippet: 'orienthr payroll compute --month 07 --year 2026 --statutory-ph'
   },
   {
-    id: 'dataflow-analytics',
-    name: 'DataFlow Streaming Intelligence',
-    tagline: 'Real-Time Edge Telemetry & Visual Analytics Engine',
-    category: 'analytics',
-    badge: 'Streaming Engine',
-    icon: 'fa-solid fa-chart-line',
+    id: 'orientbook',
+    name: 'OrientBook',
+    tagline: 'Localized MSME Accounting & Bookkeeping Software',
+    category: 'finance',
+    badge: 'Accounting SaaS',
+    icon: 'fa-solid fa-book-journal-whills',
     accentColor: 'from-purple-500 to-tech-indigo',
     borderColor: 'hover:border-purple-500/40',
     description:
-      'Process high-frequency IoT sensor data, event logs, and user telemetry in real-time with customizable visual dashboards and automated alerting.',
+      'Simplified accounting tailored for local Filipino businesses. Track income, expenses, accounts receivable/payable, tax ledgers, and financial health reports without needing an in-house CPA.',
     features: [
-      'Stream processing engine',
-      'Custom visual dashboard builder',
-      'Integrations with Kafka, Snowflake, & PostgreSQL',
-      'Edge device compression & sync'
+      'Expense tracking & receipt photo attachments',
+      'Accounts receivable & invoice tracking',
+      'Profit/loss & cash flow statement generation',
+      'Tax preparation & ledger exports',
+      'Direct integration with OrientPOS & OrientInventory'
     ],
-    codeSnippet: 'dataflow stream connect --source iot-gateway --pipeline analytics'
+    codeSnippet: 'orientbook export --statement PnL --quarter Q2 --tax-ready'
+  },
+  {
+    id: 'orientgov',
+    name: 'OrientGov',
+    tagline: 'Government Compliance, E-Filing & Document Vault',
+    category: 'finance',
+    badge: 'GovTech Solution',
+    icon: 'fa-solid fa-landmark',
+    accentColor: 'from-amber-500 to-tech-indigo',
+    borderColor: 'hover:border-amber-500/40',
+    description:
+      'Purpose-built for local government units (LGUs) and enterprises needing strict document management, e-filing automation, and regulatory permit tracking.',
+    features: [
+      'Digital document archiving & OCR search',
+      'Regulatory compliance deadline notifications',
+      'LGU permit & clearance tracking',
+      'Role-based access control & audit trails'
+    ],
+    codeSnippet: 'orientgov audit --agency lgu-tacloban --compliance-check'
   }
 ];
 
@@ -97,21 +120,21 @@ export default function Products() {
 
         <div className="container mx-auto px-[5%] max-w-[1200px] text-center fade-up">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-tech-blue/30 bg-tech-blue/10 text-tech-sky text-xs font-mono uppercase tracking-widest mb-6">
-            <i className="fa-solid fa-cube"></i> Enterprise Product Suite
+            <i className="fa-solid fa-cube"></i> SaaS Product Portfolio
           </span>
 
           <h1 className="text-[clamp(2.5rem,5.5vw,4.5rem)] font-extrabold tracking-tight text-white uppercase leading-tight mb-6">
-            Engineered for <br />
+            Built for Philippine MSMEs <br />
             <span className="bg-gradient-to-r from-tech-sky via-cyan-400 to-tech-indigo bg-clip-text text-transparent">
-              Scalability &amp; Reliability
+              &amp; Enterprise Digital Growth
             </span>
           </h1>
 
           <p className="max-w-[720px] mx-auto text-gray-400 text-base md:text-lg leading-relaxed font-sans mb-10">
-            Orientis Digital develops battle-tested enterprise software products powering modern cloud operations, API infrastructure, cyber defense, and real-time data streaming.
+            Orientis Digital develops affordable, BIR-compliant, and locally supported software products — powering point of sale, inventory tracking, HR payroll, and accounting operations.
           </p>
 
-          {/* Category Tabs */}
+          {/* Category Filter Tabs */}
           <div className="flex justify-center items-center gap-2 flex-wrap mb-4">
             <button
               onClick={() => setActiveTab('all')}
@@ -124,34 +147,34 @@ export default function Products() {
               All Products
             </button>
             <button
-              onClick={() => setActiveTab('cloud')}
+              onClick={() => setActiveTab('retail')}
               className={`px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
-                activeTab === 'cloud'
+                activeTab === 'retail'
                   ? 'bg-tech-blue text-white shadow-tech-sm'
                   : 'bg-tech-black/60 border border-white/10 text-gray-400 hover:text-white hover:border-white/20'
               }`}
             >
-              Cloud &amp; Infra
+              POS &amp; Inventory
             </button>
             <button
-              onClick={() => setActiveTab('security')}
+              onClick={() => setActiveTab('hr')}
               className={`px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
-                activeTab === 'security'
+                activeTab === 'hr'
                   ? 'bg-tech-blue text-white shadow-tech-sm'
                   : 'bg-tech-black/60 border border-white/10 text-gray-400 hover:text-white hover:border-white/20'
               }`}
             >
-              Security &amp; Gateway
+              HR &amp; Payroll
             </button>
             <button
-              onClick={() => setActiveTab('analytics')}
+              onClick={() => setActiveTab('finance')}
               className={`px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
-                activeTab === 'analytics'
+                activeTab === 'finance'
                   ? 'bg-tech-blue text-white shadow-tech-sm'
                   : 'bg-tech-black/60 border border-white/10 text-gray-400 hover:text-white hover:border-white/20'
               }`}
             >
-              Data Analytics
+              Accounting &amp; Compliance
             </button>
           </div>
         </div>
@@ -190,7 +213,7 @@ export default function Products() {
                   </p>
 
                   {/* Features List */}
-                  <ul className="space-y-2 mb-8 list-none">
+                  <ul className="space-y-2 mb-8 list-none p-0">
                     {product.features.map((feat, idx) => (
                       <li key={idx} className="text-xs text-gray-300 flex items-center gap-2">
                         <i className="fa-solid fa-check text-tech-sky text-[10px]"></i>
@@ -206,13 +229,13 @@ export default function Products() {
                     onClick={() => setSelectedProduct(product)}
                     className="flex-1 py-3 px-4 rounded-xl border border-tech-blue/30 bg-tech-blue/10 text-tech-sky font-bold text-xs uppercase tracking-wider hover:bg-tech-blue hover:text-white transition-all cursor-pointer text-center"
                   >
-                    View Specs &amp; CLI
+                    View Product Specs
                   </button>
                   <Link
                     to="/contact"
                     className="py-3 px-4 rounded-xl bg-gradient-to-r from-tech-blue to-tech-indigo text-white font-bold text-xs uppercase tracking-wider hover:shadow-tech transition-all text-center"
                   >
-                    Request Access
+                    Get Free Demo
                   </Link>
                 </div>
               </div>
@@ -248,7 +271,7 @@ export default function Products() {
 
             <div className="mb-6">
               <h4 className="text-xs font-mono uppercase text-tech-indigo tracking-wider mb-2">
-                // Quick Deployment Command
+                // System CLI Command
               </h4>
               <div className="p-4 rounded-xl bg-tech-gray/90 border border-white/10 font-mono text-xs text-tech-sky flex items-center justify-between">
                 <code>{selectedProduct.codeSnippet}</code>
@@ -276,7 +299,7 @@ export default function Products() {
                 className="flex-1 py-3 text-center text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-tech-blue to-tech-indigo rounded-xl shadow-tech"
                 onClick={() => setSelectedProduct(null)}
               >
-                Schedule Architecture Demo
+                Request Product Consultation
               </Link>
               <button
                 onClick={() => setSelectedProduct(null)}
@@ -294,16 +317,16 @@ export default function Products() {
         <div className="container mx-auto px-[5%] max-w-[900px] text-center">
           <div className="glass-panel p-12 rounded-3xl border border-white/10 relative">
             <h2 className="text-3xl font-extrabold text-white uppercase mb-4">
-              Need a Custom Enterprise Solution?
+              Need a Custom Product or Enterprise Integration?
             </h2>
             <p className="text-gray-400 text-sm max-w-[600px] mx-auto mb-8">
-              Our engineering team can customize and integrate our product suite to meet your exact compliance, security, and workload requirements.
+              Orientis Digital builds custom extensions and tailored software solutions for local government units, enterprises, and regional MSMEs.
             </p>
             <Link
               to="/contact"
               className="inline-block px-10 py-4 font-bold text-sm uppercase tracking-wider text-white bg-gradient-to-r from-tech-blue to-tech-indigo rounded-xl shadow-tech hover:opacity-90"
             >
-              Talk to Engineering &gt;
+              Talk to Our Team &gt;
             </Link>
           </div>
         </div>

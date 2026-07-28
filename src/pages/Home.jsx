@@ -4,42 +4,42 @@ import Typewriter from '../components/Typewriter';
 
 const terminalTabs = [
   {
-    id: 'deploy',
-    title: 'orientis deploy',
-    command: 'orientis deploy --env production --cluster aws-east-1 --canary 10%',
+    id: 'orientpos',
+    title: 'orientpos setup',
+    command: 'orientpos setup --terminal pos-01 --branch tacloban-main --bir-mode',
     output: [
-      '✔ Parsing infrastructure manifest (orientis.yaml)...',
-      '✔ Provisioning AWS EKS & Cloudflare Edge routing...',
-      '✔ Running automated health & security checks...',
-      '🚀 Deployment successful! Live at https://app.orientis.tech'
+      '✔ Initializing OrientPOS v2.4 (Tacloban Main Branch)...',
+      '✔ Loading offline transaction cache & receipt engine...',
+      '✔ GCash & Maya QR integration online...',
+      '🚀 POS Active — BIR tax compliant mode enabled.'
     ]
   },
   {
-    id: 'nexus',
-    title: 'nexus proxy',
-    command: 'nexus gateway proxy --target api.internal --rate-limit adaptive --jwt-auth',
+    id: 'orientinventory',
+    title: 'orientinventory sync',
+    command: 'orientinventory sync --warehouse central-01 --auto-reorder',
     output: [
-      '✔ Initializing Nexus Gateway v2.1...',
-      '✔ Loading OAuth2 / JWT verification middleware...',
-      '✔ Adaptive rate limiting active (subnet filtering enabled)...',
-      '⚡ Proxy active on port 443 with sub-millisecond routing'
+      '✔ Connected to OrientInventory Mobile Scanner...',
+      '✔ 1,420 SKUs verified across multi-location stores...',
+      '✔ Automated low-stock SMS alert triggers active...',
+      '⚡ Inventory sync complete with 0 discrepancy.'
     ]
   },
   {
-    id: 'shieldops',
-    title: 'shieldops audit',
-    command: 'shieldops audit --scope cloud-infra --auto-remediate',
+    id: 'orienthr',
+    title: 'orienthr payroll',
+    command: 'orienthr payroll compute --month 07 --year 2026 --statutory-ph',
     output: [
-      '✔ Scanning 142 container images & IAM policies...',
-      '✔ Zero critical CVE vulnerabilities detected.',
-      '✔ Compliance enforced: SOC2 Type II & ISO 27001.',
-      '🛡️ Autonomous security shield active.'
+      '✔ Processing Philippine statutory payroll rules...',
+      '✔ SSS, PhilHealth, Pag-IBIG & 13th month auto-calculated...',
+      '✔ Generated 48 PDF payslips in secure document vault...',
+      '🛡️ Payroll execution completed cleanly.'
     ]
   }
 ];
 
 export default function Home() {
-  const [activeTermTab, setActiveTermTab] = useState('deploy');
+  const [activeTermTab, setActiveTermTab] = useState('orientpos');
   const [copied, setCopied] = useState(false);
 
   const currentTab = terminalTabs.find((t) => t.id === activeTermTab);
@@ -68,20 +68,20 @@ export default function Home() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-tech-sky opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-tech-sky"></span>
             </span>
-            Systems Online // Enterprise Platform 2026
+            Eastern Visayas Premier Tech Partner // Tacloban HQ
           </div>
 
           <h1 className="text-[clamp(2.5rem,6.5vw,5.5rem)] font-extrabold tracking-tight leading-[1.05] mb-8 text-white uppercase">
-            Power Your <br />
+            Powering Your <br />
             <span className="bg-gradient-to-r from-tech-sky via-cyan-400 to-tech-indigo bg-clip-text text-transparent">
-              Digital Future.
+              Digital Transformation.
             </span>
           </h1>
 
           <Typewriter />
 
           <p className="max-w-[680px] mx-auto mb-12 text-sm md:text-[1.05rem] leading-relaxed text-gray-400 border border-white/5 p-6 bg-tech-gray/45 backdrop-blur-md rounded-2xl font-sans shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-            &gt; Orientis Digital provides high-performance enterprise products, cloud infrastructure, and custom engineering strategies to scale, automate, and innovate.
+            &gt; Orientis Digital delivers BIR-compliant SaaS software (OrientPOS, OrientInventory, OrientHR), custom web/mobile applications, and managed IT services for MSMEs, enterprises, and government agencies.
           </p>
 
           <div className="flex gap-5 justify-center flex-wrap">
@@ -89,99 +89,99 @@ export default function Home() {
               to="/products"
               className="inline-block px-10 py-4 font-bold transition-all duration-200 text-sm md:text-base bg-gradient-to-r from-tech-blue to-tech-indigo text-white border-0 hover:shadow-tech hover:-translate-y-0.5 shadow-tech-sm uppercase tracking-wider rounded-xl"
             >
-              Explore Products
+              Explore SaaS Products
             </Link>
             <Link
               to="/solutions"
               className="inline-block px-10 py-4 font-bold transition-all duration-200 text-sm md:text-base bg-transparent text-white border border-white/10 hover:border-tech-blue hover:bg-tech-blue/10 uppercase tracking-wider rounded-xl"
             >
-              Our Solutions
+              Custom IT Services
             </Link>
           </div>
         </div>
       </section>
 
-      {/* 2. Core Engineering Pillars (Why Orientis) */}
+      {/* 2. Core Pillars (Why Orientis) */}
       <section className="py-20 bg-tech-black/60 border-t border-white/5 relative">
         <div className="container mx-auto px-[5%] max-w-[1280px]">
           <div className="text-center mb-16">
             <span className="text-tech-sky text-xs font-mono font-bold uppercase tracking-widest block mb-2">
-              // Why Orientis Digital
+              // Why Choose Orientis Digital
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-white uppercase">
-              Engineered for Enterprise Excellence
+              Digital Transformation, Locally Delivered
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-tech-sky/40 transition-all group">
               <div className="w-12 h-12 rounded-xl bg-tech-blue/10 border border-tech-blue/20 flex items-center justify-center text-tech-sky text-xl mb-4 group-hover:scale-110 transition-transform">
-                <i className="fa-solid fa-shield-halved"></i>
+                <i className="fa-solid fa-map-location-dot"></i>
               </div>
               <h3 className="text-lg font-bold text-white mb-2 group-hover:text-tech-sky transition-colors">
-                Zero-Trust Security
+                Local Presence
               </h3>
               <p className="text-xs text-gray-400 leading-relaxed font-sans">
-                Continuous vulnerability scanning, encrypted data pipelines, and SOC2/ISO compliance out of the box.
+                Based in Tacloban, Leyte — fast on-site support, face-to-face meetings, and deep understanding of regional business needs.
               </p>
             </div>
 
             <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-tech-indigo/40 transition-all group">
               <div className="w-12 h-12 rounded-xl bg-tech-indigo/10 border border-tech-indigo/20 flex items-center justify-center text-tech-indigo text-xl mb-4 group-hover:scale-110 transition-transform">
-                <i className="fa-solid fa-bolt"></i>
+                <i className="fa-solid fa-receipt"></i>
               </div>
               <h3 className="text-lg font-bold text-white mb-2 group-hover:text-tech-indigo transition-colors">
-                Global Edge Speed
+                BIR-Compliant SaaS
               </h3>
               <p className="text-xs text-gray-400 leading-relaxed font-sans">
-                Multi-region edge routing with sub-millisecond latency for global user workloads.
+                Affordable software products optimized for Philippine tax regulations, statutory contributions, and local payment gateways.
               </p>
             </div>
 
             <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-cyan-400/40 transition-all group">
               <div className="w-12 h-12 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 text-xl mb-4 group-hover:scale-110 transition-transform">
-                <i className="fa-solid fa-terminal"></i>
+                <i className="fa-solid fa-layer-group"></i>
               </div>
               <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                Developer-First DX
+                Full-Stack Capabilities
               </h3>
               <p className="text-xs text-gray-400 leading-relaxed font-sans">
-                Intuitive CLI tools, unified SDKs, and REST/gRPC endpoints designed for modern engineering teams.
+                End-to-end design, custom web &amp; mobile app development, UI/UX design, and 24/7 managed IT infrastructure.
               </p>
             </div>
 
             <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-tech-sky/40 transition-all group">
               <div className="w-12 h-12 rounded-xl bg-tech-sky/10 border border-tech-sky/20 flex items-center justify-center text-tech-sky text-xl mb-4 group-hover:scale-110 transition-transform">
-                <i className="fa-solid fa-arrows-rotate"></i>
+                <i className="fa-solid fa-hand-holding-dollar"></i>
               </div>
               <h3 className="text-lg font-bold text-white mb-2 group-hover:text-tech-sky transition-colors">
-                Autonomous Failover
+                MSME-Friendly Pricing
               </h3>
               <p className="text-xs text-gray-400 leading-relaxed font-sans">
-                Self-healing infrastructure monitoring with intelligent auto-scaling and zero downtime.
+                Flexible subscription models without massive upfront software development costs, built specifically for growing MSMEs.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. Featured Software Suite (Products Preview) */}
+      {/* 3. Featured Software Products */}
       <section className="py-20 bg-tech-gray/30 border-t border-white/5 relative z-20">
         <div className="container mx-auto px-[5%] max-w-[1280px]">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
               <span className="text-tech-sky text-xs font-mono font-bold uppercase tracking-widest block mb-2">
-                // Product Ecosystem
+                // SaaS Product Suite
               </span>
               <h2 className="text-3xl font-extrabold text-white uppercase">
-                Featured Software Suite
+                Featured Orientis Software
               </h2>
             </div>
             <Link
               to="/products"
               className="text-xs font-bold text-tech-sky hover:text-white uppercase tracking-wider flex items-center gap-1.5"
             >
-              View All Products <i className="fa-solid fa-arrow-right text-[10px]"></i>
+              View Full Portfolio <i className="fa-solid fa-arrow-right text-[10px]"></i>
             </Link>
           </div>
 
@@ -189,13 +189,13 @@ export default function Home() {
             <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-tech-sky/40 transition-all group flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 rounded-xl bg-tech-blue/10 border border-tech-blue/20 flex items-center justify-center text-tech-sky text-xl mb-4 group-hover:scale-110 transition-transform">
-                  <i className="fa-solid fa-server"></i>
+                  <i className="fa-solid fa-cash-register"></i>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-tech-sky transition-colors">
-                  Cloud Orchestrator
+                  OrientPOS
                 </h3>
                 <p className="text-xs text-gray-400 leading-relaxed font-sans">
-                  Automated multi-cloud workload provisioning &amp; zero-downtime deployments.
+                  BIR-compliant Point of Sale with offline mode, thermal receipts, and GCash/Maya support.
                 </p>
               </div>
               <Link
@@ -209,13 +209,13 @@ export default function Home() {
             <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-tech-indigo/40 transition-all group flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 rounded-xl bg-tech-indigo/10 border border-tech-indigo/20 flex items-center justify-center text-tech-indigo text-xl mb-4 group-hover:scale-110 transition-transform">
-                  <i className="fa-solid fa-network-wired"></i>
+                  <i className="fa-solid fa-boxes-stacked"></i>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-tech-indigo transition-colors">
-                  Nexus API Gateway
+                  OrientInventory
                 </h3>
                 <p className="text-xs text-gray-400 leading-relaxed font-sans">
-                  Sub-millisecond API proxy with adaptive DDoS protection and rate limiting.
+                  Barcode stock tracking, automated low-stock alerts, and multi-location warehouse management.
                 </p>
               </div>
               <Link
@@ -229,13 +229,13 @@ export default function Home() {
             <div className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-cyan-400/40 transition-all group flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 text-xl mb-4 group-hover:scale-110 transition-transform">
-                  <i className="fa-solid fa-shield-halved"></i>
+                  <i className="fa-solid fa-users-gear"></i>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                  ShieldOps Cyber
+                  OrientHR
                 </h3>
                 <p className="text-xs text-gray-400 leading-relaxed font-sans">
-                  AI incident response, continuous audit scanning &amp; vulnerability patching.
+                  Automated PH payroll, SSS/PhilHealth/Pag-IBIG contribution computing, and PDF payslips.
                 </p>
               </div>
               <Link
@@ -249,30 +249,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Interactive Developer CLI Terminal Showcase */}
+      {/* 4. Interactive CLI & Product Demo Terminal */}
       <section className="py-24 bg-tech-black border-t border-white/5 relative overflow-hidden">
         <div className="container mx-auto px-[5%] max-w-[1000px]">
           <div className="text-center mb-12">
             <span className="text-tech-sky text-xs font-mono font-bold uppercase tracking-widest block mb-2">
-              // Unified Developer Experience
+              // Unified System Commands
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-white uppercase">
-              Control Infrastructure from the Terminal
+              Control &amp; Automate Orientis Software
             </h2>
           </div>
 
-          {/* Terminal Box */}
           <div className="glass-panel rounded-3xl border border-white/15 overflow-hidden shadow-2xl bg-tech-black/90">
-            {/* Terminal Header */}
             <div className="bg-tech-gray/90 px-6 py-4 border-b border-white/10 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <span className="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
                 <span className="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
                 <span className="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
-                <span className="text-xs font-mono text-gray-400 ml-2">orientis-cli ~ bash</span>
+                <span className="text-xs font-mono text-gray-400 ml-2">orientis-sys ~ bash</span>
               </div>
 
-              {/* Terminal Tabs */}
               <div className="flex gap-2">
                 {terminalTabs.map((t) => (
                   <button
@@ -290,9 +287,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Terminal Content */}
             <div className="p-6 font-mono text-xs md:text-sm">
-              {/* Command Row */}
               <div className="flex items-center justify-between mb-4 pb-3 border-b border-white/5">
                 <div className="flex items-center gap-2 text-tech-sky">
                   <span className="text-tech-indigo">&gt;</span>
@@ -307,7 +302,6 @@ export default function Home() {
                 </button>
               </div>
 
-              {/* Command Output Log */}
               <div className="space-y-2 text-gray-400">
                 {currentTab.output.map((line, idx) => (
                   <p key={idx} className="leading-relaxed">
@@ -320,55 +314,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Interactive Deployment Pipeline ("How It Works") */}
+      {/* 5. How We Work */}
       <section className="py-24 bg-tech-gray/20 border-t border-white/5 relative">
         <div className="container mx-auto px-[5%] max-w-[1280px]">
           <div className="text-center mb-16">
             <span className="text-tech-indigo text-xs font-mono font-bold uppercase tracking-widest block mb-2">
-              // Streamlined Workflow
+              // Local Support Process
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-white uppercase">
-              How Orientis Powers Your Systems
+              How We Partner With You
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            {/* Step 1 */}
             <div className="glass-panel p-8 rounded-3xl border border-white/10 hover:border-tech-sky/40 transition-all relative group">
               <span className="text-4xl font-extrabold font-mono text-tech-sky/30 block mb-4">
                 01
               </span>
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-tech-sky transition-colors">
-                Connect &amp; Audit
+                Consultation &amp; Assessment
               </h3>
               <p className="text-xs text-gray-400 leading-relaxed font-sans">
-                Integrate your existing cloud providers (AWS, GCP, Azure) and code repositories. Automated vulnerability and architecture scanners audit your assets immediately.
+                We meet face-to-face in Tacloban or online to analyze your business workflows, tax requirements, and IT infrastructure gaps.
               </p>
             </div>
 
-            {/* Step 2 */}
             <div className="glass-panel p-8 rounded-3xl border border-white/10 hover:border-tech-indigo/40 transition-all relative group">
               <span className="text-4xl font-extrabold font-mono text-tech-indigo/30 block mb-4">
                 02
               </span>
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-tech-indigo transition-colors">
-                Deploy &amp; Orchestrate
+                Deploy &amp; Integrate
               </h3>
               <p className="text-xs text-gray-400 leading-relaxed font-sans">
-                Deploy the Orientis product suite (Orchestrator, Nexus Gateway, ShieldOps) to manage workloads with sub-millisecond edge routing and zero downtime.
+                Deploy Orientis SaaS products or build custom web/mobile solutions tailored specifically to your operational goals.
               </p>
             </div>
 
-            {/* Step 3 */}
             <div className="glass-panel p-8 rounded-3xl border border-white/10 hover:border-cyan-400/40 transition-all relative group">
               <span className="text-4xl font-extrabold font-mono text-cyan-400/30 block mb-4">
                 03
               </span>
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                Scale &amp; Protect
+                Local On-Site Support
               </h3>
               <p className="text-xs text-gray-400 leading-relaxed font-sans">
-                Continuous autonomous monitoring handles auto-scaling, DDoS defense, and security patching while your team focuses on building core products.
+                Enjoy ongoing staff training, same-day local technical support, and continuous system updates.
               </p>
             </div>
           </div>
@@ -382,10 +373,22 @@ export default function Home() {
             <span className="text-tech-sky text-xs font-bold uppercase tracking-widest font-mono mb-2 block">
               // Core Tech Stack
             </span>
-            <h2 className="text-3xl font-bold text-white uppercase">Ecosystem Architecture</h2>
+            <h2 className="text-3xl font-bold text-white uppercase">Development Technologies</h2>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+            <div className="glass-panel p-4 rounded-xl flex flex-col items-center justify-center hover:border-tech-sky/40 transition-colors group">
+              <i className="fa-brands fa-react text-3xl text-gray-500 group-hover:text-[#61DAFB] transition-colors mb-2"></i>
+              <span className="text-[10px] font-mono text-gray-400 uppercase tracking-wider">React</span>
+            </div>
+            <div className="glass-panel p-4 rounded-xl flex flex-col items-center justify-center hover:border-tech-sky/40 transition-colors group">
+              <i className="fa-brands fa-node-js text-3xl text-gray-500 group-hover:text-[#339933] transition-colors mb-2"></i>
+              <span className="text-[10px] font-mono text-gray-400 uppercase tracking-wider">Node.js</span>
+            </div>
+            <div className="glass-panel p-4 rounded-xl flex flex-col items-center justify-center hover:border-tech-sky/40 transition-colors group">
+              <i className="fa-solid fa-database text-3xl text-gray-500 group-hover:text-[#336791] transition-colors mb-2"></i>
+              <span className="text-[10px] font-mono text-gray-400 uppercase tracking-wider">PostgreSQL</span>
+            </div>
             <div className="glass-panel p-4 rounded-xl flex flex-col items-center justify-center hover:border-tech-sky/40 transition-colors group">
               <i className="fa-brands fa-aws text-3xl text-gray-500 group-hover:text-[#FF9900] transition-colors mb-2"></i>
               <span className="text-[10px] font-mono text-gray-400 uppercase tracking-wider">AWS</span>
@@ -399,20 +402,8 @@ export default function Home() {
               <span className="text-[10px] font-mono text-gray-400 uppercase tracking-wider">Docker</span>
             </div>
             <div className="glass-panel p-4 rounded-xl flex flex-col items-center justify-center hover:border-tech-sky/40 transition-colors group">
-              <i className="fa-brands fa-node-js text-3xl text-gray-500 group-hover:text-[#339933] transition-colors mb-2"></i>
-              <span className="text-[10px] font-mono text-gray-400 uppercase tracking-wider">Node.js</span>
-            </div>
-            <div className="glass-panel p-4 rounded-xl flex flex-col items-center justify-center hover:border-tech-sky/40 transition-colors group">
               <i className="fa-brands fa-python text-3xl text-gray-500 group-hover:text-[#3776AB] transition-colors mb-2"></i>
               <span className="text-[10px] font-mono text-gray-400 uppercase tracking-wider">Python</span>
-            </div>
-            <div className="glass-panel p-4 rounded-xl flex flex-col items-center justify-center hover:border-tech-sky/40 transition-colors group">
-              <i className="fa-brands fa-react text-3xl text-gray-500 group-hover:text-[#61DAFB] transition-colors mb-2"></i>
-              <span className="text-[10px] font-mono text-gray-400 uppercase tracking-wider">React</span>
-            </div>
-            <div className="glass-panel p-4 rounded-xl flex flex-col items-center justify-center hover:border-tech-sky/40 transition-colors group">
-              <i className="fa-brands fa-js-square text-3xl text-gray-500 group-hover:text-[#F7DF1E] transition-colors mb-2"></i>
-              <span className="text-[10px] font-mono text-gray-400 uppercase tracking-wider">JS (ES6+)</span>
             </div>
             <div className="glass-panel p-4 rounded-xl flex flex-col items-center justify-center hover:border-tech-sky/40 transition-colors group">
               <i className="fa-solid fa-cube text-3xl text-gray-500 group-hover:text-tech-indigo transition-colors mb-2"></i>
@@ -422,7 +413,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. Quote / Manifesto Section */}
+      {/* 7. Quote Section */}
       <section className="py-28 bg-tech-black relative overflow-hidden border-t border-tech-blue/10">
         <div className="absolute top-1/2 left-1/2 w-[800px] h-[400px] bg-tech-indigo/10 -translate-x-1/2 -translate-y-1/2 blur-[100px] -z-10 animate-pulse"></div>
 
@@ -431,13 +422,10 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-tr from-tech-blue/5 to-tech-indigo/5 rounded-3xl -z-10"></div>
 
             <h2 className="text-[clamp(1.8rem,4vw,3.2rem)] font-bold tracking-tight leading-[1.15] mb-8 text-white uppercase">
-              "Innovation is not a feature,<br />it's the{' '}
-              <span className="bg-gradient-to-r from-tech-sky via-cyan-400 to-tech-indigo bg-clip-text text-transparent">
-                foundation
-              </span>."
+              "Building Digital Futures,<br />One Business at a <span className="bg-gradient-to-r from-tech-sky via-cyan-400 to-tech-indigo bg-clip-text text-transparent">Time</span>."
             </h2>
             <p className="mt-6 text-[1.05rem] text-gray-400 leading-relaxed max-w-[650px] mx-auto font-sans">
-              &gt; Join the growing number of modern enterprises relying on Orientis Digital software &amp; infrastructure.
+              &gt; Partner with Tacloban's full-service IT team for custom web applications, mobile solutions, and BIR-compliant SaaS software.
             </p>
             <div className="mt-12">
               <Link
