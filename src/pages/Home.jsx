@@ -16,13 +16,6 @@ export default function Home() {
         <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-tech-sky/10 rounded-full blur-[140px] pointer-events-none"></div>
 
         <div className="container mx-auto px-[5%] max-w-[900px] z-10 text-center fade-up">
-          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-tech-blue/20 bg-tech-blue/5 text-tech-sky text-xs font-mono uppercase tracking-widest mb-8">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-tech-sky opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-tech-sky"></span>
-            </span>
-            Eastern Visayas Premier Tech Partner // Tacloban HQ
-          </div>
 
           <h1 className="text-[clamp(2.5rem,6.5vw,5.5rem)] font-extrabold tracking-tight leading-[1.05] mb-8 text-white uppercase">
             Powering Your <br />
