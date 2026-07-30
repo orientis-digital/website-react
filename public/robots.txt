@@ -1,0 +1,58 @@
+# ==============================================================================
+# Orientis Digital - Robots Exclusion Protocol (robots.txt)
+# Website: https://orientis.digital
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Default Rules for Search Engines & Standard Crawlers
+# ------------------------------------------------------------------------------
+User-agent: *
+Allow: /
+Allow: /static/
+Allow: /favicon.svg
+
+# Prevent search engine indexing of error pages
+Disallow: /404
+Disallow: /500
+Disallow: /403
+
+# Prevent indexing of raw data assets (allow sitemap)
+Disallow: /*.json$
+Disallow: /*.xml$
+Allow: /sitemap.xml
+
+# ------------------------------------------------------------------------------
+# Major Search Engine Crawlers (Full Rendering Access)
+# ------------------------------------------------------------------------------
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# ------------------------------------------------------------------------------
+# Aggressive Scraper Rate-Limiting & Blocking
+# ------------------------------------------------------------------------------
+User-agent: AhrefsBot
+Crawl-delay: 5
+
+User-agent: SemrushBot
+Crawl-delay: 5
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# ------------------------------------------------------------------------------
+# Sitemap & Host Directives
+# ------------------------------------------------------------------------------
+Host: https://orientis.digital
+Sitemap: https://orientis.digital/sitemap.xml

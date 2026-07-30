@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../../components/SEO';
 
 const teamMembers = [
   {
@@ -63,14 +64,15 @@ const teamMembers = [
 export default function About() {
   return (
     <main className="flex-1 pt-28 pb-24">
+      <SEO
+        title="About Orientis Digital | Tacloban IT Partner"
+        description="Learn about Orientis Digital, Tacloban's premier technology company delivering custom web software, enterprise SaaS solutions, and managed IT services in Eastern Visayas."
+      />
       {/* Hero Header Section */}
       <section className="relative overflow-hidden pt-12 pb-20 border-b border-white/5">
         <div className="absolute top-1/3 left-1/2 w-[700px] h-[500px] bg-tech-blue/10 -translate-x-1/2 -translate-y-1/2 blur-[140px] pointer-events-none -z-10"></div>
 
         <div className="container mx-auto px-[5%] max-w-[1100px] text-center fade-up">
-          <span className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-tech-blue/30 bg-tech-blue/10 text-tech-sky text-xs font-mono uppercase tracking-widest mb-6">
-            <i className="fa-solid fa-location-dot"></i> Tacloban City, Leyte // Region 8 Digital Transformation
-          </span>
 
           <h1 className="text-[clamp(2.5rem,5.5vw,4.5rem)] font-extrabold tracking-tight text-white uppercase leading-tight mb-6">
             Digital Transformation, <br />
@@ -80,7 +82,7 @@ export default function About() {
           </h1>
 
           <p className="max-w-[780px] mx-auto text-gray-300 text-base md:text-lg leading-relaxed font-sans mb-10">
-            Orientis Digital is Tacloban's full-service technology company. We empower micro, small, and medium enterprises (MSMEs), government agencies, and enterprises in Eastern Visayas with custom web &amp; mobile software, BIR-compliant software tools, and managed IT services.
+            Orientis Digital is Tacloban's full-service technology company. We empower micro, small, and medium enterprises (MSMEs), government agencies, and enterprises in Eastern Visayas with custom web &amp; mobile software, enterprise software tools, and managed IT services.
           </p>
 
           <div className="flex gap-4 justify-center flex-wrap">
@@ -126,7 +128,7 @@ export default function About() {
                 Solving Real Business Challenges
               </h2>
               <p className="text-gray-300 text-sm md:text-base leading-relaxed font-sans">
-                "Orientis Digital delivers custom web applications, mobile solutions, BIR-compliant software tools, and managed IT services. We combine technical excellence with deep regional market understanding to help local businesses thrive."
+                "Orientis Digital delivers custom web applications, mobile solutions, enterprise SaaS software tools, and managed IT services. We combine technical excellence with deep regional market understanding to help local businesses thrive."
               </p>
             </div>
           </div>
@@ -287,9 +289,9 @@ export default function About() {
                   <i className="fa-solid fa-[#2496ED] fa-building-columns"></i>
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-white mb-1">Regional Regulatory Expertise</h4>
+                  <h4 className="text-lg font-bold text-white mb-1">Regional Statutory & Business Expertise</h4>
                   <p className="text-xs text-gray-400 font-sans leading-relaxed">
-                    Deep understanding of Philippine statutory regulations (BIR compliance, SSS/PhilHealth/Pag-IBIG rules) and LGU government processes.
+                    Deep understanding of Philippine statutory regulations (tax & statutory contribution rules) and LGU government processes.
                   </p>
                 </div>
               </div>

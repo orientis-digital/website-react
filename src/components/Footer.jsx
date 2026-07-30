@@ -84,7 +84,7 @@ export default function Footer() {
               </Link>
 
               <p className="text-xs text-gray-400 leading-relaxed mb-4 font-sans border-l-2 border-tech-blue/40 pl-3">
-                &gt; Custom web &amp; mobile software engineering, BIR-compliant SaaS solutions, and managed IT services in Tacloban City, Leyte, Philippines.
+                &gt; Custom web &amp; mobile software engineering, enterprise SaaS solutions, and managed IT services in Tacloban City, Leyte, Philippines.
               </p>
 
               {/* Direct Email Display */}

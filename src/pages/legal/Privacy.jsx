@@ -1,8 +1,13 @@
 import React from 'react';
+import SEO from '../../components/SEO';
 
 export default function Privacy() {
   return (
     <main className="flex-1 pt-28 pb-24 min-h-[85vh]">
+      <SEO
+        title="Privacy Policy"
+        description="Orientis Digital Privacy Policy outlining data protection, privacy guidelines, and customer security policies."
+      />
       <section className="relative overflow-hidden pt-12 pb-20">
         <div className="absolute top-1/3 left-1/2 w-[600px] h-[400px] bg-tech-blue/10 -translate-x-1/2 -translate-y-1/2 blur-[140px] pointer-events-none -z-10"></div>
 

@@ -4,11 +4,11 @@ import { useLocation } from 'react-router-dom';
 const pageMetadata = {
   '/': {
     title: 'Orientis Digital | Digital Transformation, Locally Delivered',
-    desc: "Tacloban's full-service technology partner for custom web & mobile software applications, BIR-compliant SaaS tools, and managed IT services in Eastern Visayas."
+    desc: "Tacloban's full-service technology partner for custom web & mobile software applications, enterprise SaaS tools, and managed IT services in Eastern Visayas."
   },
   '/products': {
     title: 'Software Products (Launching Soon) | Orientis Digital',
-    desc: 'Explore upcoming BIR-compliant software tools and join the early access waitlist for Orientis SaaS solutions.'
+    desc: 'Explore upcoming enterprise software tools and join the early access waitlist for Orientis SaaS solutions.'
   },
   '/solutions': {
     title: 'Custom Software & IT Solutions | Orientis Digital',

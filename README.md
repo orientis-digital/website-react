@@ -2,7 +2,7 @@
 
 Welcome to the repository for the **Orientis Digital** web application built with React, Vite, and Tailwind CSS. 
 
-Orientis Digital is Eastern Visayas' premier technology partner based in Tacloban City, Leyte, Philippines. We deliver custom software development (web and mobile), BIR-compliant SaaS tools, and managed IT infrastructure solutions for MSMEs, enterprises, and government agencies.
+Orientis Digital is Eastern Visayas' premier technology partner based in Tacloban City, Leyte, Philippines. We deliver custom software development (web and mobile), enterprise SaaS tools, and managed IT infrastructure solutions for MSMEs, enterprises, and government agencies.
 
 ---
 
@@ -19,7 +19,7 @@ Orientis Digital is Eastern Visayas' premier technology partner based in Tacloba
 ## 🛠️ Key Features & Pages
 
 - **Home (`/`)**: Main landing page highlighting core technology pillars, flagship SaaS products, custom services, and company values.
-- **Products (`/products`)**: Showcase of software products and BIR-compliant SaaS platforms.
+- **Products (`/products`)**: Showcase of software products and enterprise SaaS platforms.
 - **Solutions (`/solutions`)**: Overview of enterprise software development, IT infrastructure, cloud migration, and tech consulting.
 - **About (`/about`)**: Story, mission, vision, leadership, and regional impact of Orientis Digital.
 - **Contact (`/contact`)**: Interactive inquiry and project onboarding contact form.

@@ -1,9 +1,14 @@
 import React from 'react';
 import ContactForm from '../../components/ContactForm';
+import SEO from '../../components/SEO';
 
 export default function Contact() {
   return (
     <main className="min-h-screen bg-tech-black flex items-center justify-center pt-32 pb-24 relative overflow-hidden flex-1">
+      <SEO
+        title="Contact Orientis Digital | Tacloban Engineering HQ"
+        description="Get in touch with Orientis Digital for custom web & mobile software development, enterprise SaaS software, or managed cloud services in Tacloban, Leyte."
+      />
       {/* Glow Backdrop */}
       <div className="absolute bottom-[-10%] left-1/2 -translate-x-1/2 w-[80%] h-[250px] bg-tech-blue/10 rounded-[100%] blur-[100px] z-0 pointer-events-none"></div>
 

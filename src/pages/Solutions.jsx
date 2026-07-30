@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const solutionsList = [
   {
@@ -94,6 +95,10 @@ export default function Solutions() {
 
   return (
     <main className="flex-1 pt-28 pb-24">
+      <SEO
+        title="Custom IT Solutions & Managed Cloud Ops"
+        description="Custom web & mobile software engineering, managed cloud ops, strategic tech advisory, and IoT systems by Orientis Digital."
+      />
       {/* Hero Header */}
       <section className="relative overflow-hidden pt-12 pb-20 border-b border-white/5">
         <div className="absolute top-1/3 left-1/2 w-[700px] h-[500px] bg-tech-indigo/10 -translate-x-1/2 -translate-y-1/2 blur-[140px] pointer-events-none -z-10"></div>

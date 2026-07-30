@@ -1,10 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Typewriter from '../components/Typewriter';
+import SEO from '../components/SEO';
 
 export default function Home() {
   return (
     <main className="flex-1">
+      <SEO
+        title="Orientis Digital | Digital Transformation, Locally Delivered"
+        description="Tacloban's full-service technology partner for custom web & mobile software applications, enterprise SaaS tools, and managed IT services in Eastern Visayas, Philippines."
+      />
       {/* 1. Hero Section */}
       <section className="min-h-[92vh] flex items-center justify-center relative overflow-hidden pt-32 pb-20">
         <div className="absolute inset-0 z-0 opacity-25 pointer-events-none">
@@ -27,7 +32,7 @@ export default function Home() {
           <Typewriter />
 
           <p className="max-w-[680px] mx-auto mb-12 text-sm md:text-[1.05rem] leading-relaxed text-gray-400 border border-white/5 p-6 bg-tech-gray/45 backdrop-blur-md rounded-2xl font-sans shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-            &gt; Orientis Digital delivers custom web/mobile software applications, BIR-compliant SaaS tools, and managed IT infrastructure for MSMEs, enterprises, and government agencies.
+            &gt; Orientis Digital delivers custom web/mobile software applications, enterprise SaaS tools, and managed IT infrastructure for MSMEs, enterprises, and government agencies.
           </p>
 
           <div className="flex gap-5 justify-center flex-wrap">
@@ -77,10 +82,10 @@ export default function Home() {
                 <i className="fa-solid fa-receipt"></i>
               </div>
               <h3 className="text-lg font-bold text-white mb-2 group-hover:text-tech-indigo transition-colors">
-                BIR-Compliant Software
+                Enterprise SaaS Software
               </h3>
               <p className="text-xs text-gray-400 leading-relaxed font-sans">
-                Affordable software tools optimized for Philippine tax regulations, statutory contributions, and local payment gateways.
+                Affordable software tools optimized for business management, workforce workflows, and local payment gateways.
               </p>
             </div>
 
@@ -248,7 +253,7 @@ export default function Home() {
               "Building Digital Futures,<br />One Business at a <span className="bg-gradient-to-r from-tech-sky via-cyan-400 to-tech-indigo bg-clip-text text-transparent">Time</span>."
             </h2>
             <p className="mt-6 text-[1.05rem] text-gray-400 leading-relaxed max-w-[650px] mx-auto font-sans">
-              &gt; Partner with Tacloban's full-service IT team for custom web applications, mobile solutions, and BIR-compliant software.
+              &gt; Partner with Tacloban's full-service IT team for custom web applications, mobile solutions, and enterprise software.
             </p>
             <div className="mt-12">
               <Link

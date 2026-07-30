@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 export default function Products() {
   const [waitlistEmail, setWaitlistEmail] = useState('');
@@ -14,6 +15,10 @@ export default function Products() {
 
   return (
     <main className="flex-1 pt-28 pb-24 min-h-[85vh] flex flex-col justify-center">
+      <SEO
+        title="Software Products & Enterprise SaaS Suite"
+        description="Explore Orientis Digital's suite of enterprise software tools, OrientPOS, OrientInventory, and OrientHR designed for Philippine MSMEs and enterprises."
+      />
       {/* Hero / Coming Soon Section */}
       <section className="relative overflow-hidden pt-12 pb-20">
         {/* Glow Effects */}
@@ -38,7 +43,7 @@ export default function Products() {
           </h1>
 
           <p className="max-w-[700px] mx-auto text-gray-300 text-base md:text-lg leading-relaxed font-sans mb-12">
-            Our team is currently preparing our suite of BIR-compliant SaaS software products. Detailed product specifications, feature modules, and subscription tiers will be posted soon.
+            Our team is currently preparing our suite of enterprise SaaS software products. Detailed product specifications, feature modules, and subscription tiers will be posted soon.
           </p>
 
           {/* Early Access Waitlist Box */}
