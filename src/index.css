@@ -3,18 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --tech-black: #020617;
-  --tech-gray: #0f172a;
-  --tech-slate: #1e293b;
-  --tech-blue: #06b6d4; /* Brand Cyan */
-  --tech-indigo: #f97316; /* Brand Orange */
-  --tech-sky: #22d3ee; /* Brand Light Cyan */
-  --muted: #94a3b8;
+  --impeccable-amber: #CC8800; /* Primary Amber Accent */
+  --impeccable-orange: #C55221; /* Secondary Burnt Orange */
+  --impeccable-cream: #FDF8F0; /* Warm Parchment Cream Surface */
+  --impeccable-charcoal: #111827; /* Dark Charcoal Ink Base */
+  --tech-black: #0B0F17;
+  --tech-gray: #111827;
+  --tech-slate: #1F2937;
+  --tech-blue: #CC8800;
+  --tech-indigo: #C55221;
+  --tech-sky: #EAB308;
+  --muted: #9CA3AF;
 }
 
-/* Brand Gradient Text Utility */
+/* Brand Impeccable Gradient Text Utility */
 .text-brand-gradient {
-  background: linear-gradient(135deg, var(--tech-sky) 0%, var(--tech-indigo) 100%);
+  background: linear-gradient(135deg, var(--impeccable-amber) 0%, var(--impeccable-orange) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -53,7 +57,7 @@
 .typewriter::after {
   content: '|';
   animation: blink 1s step-end infinite;
-  color: var(--tech-blue);
+  color: var(--impeccable-amber);
 }
 
 @keyframes blink {
@@ -65,16 +69,16 @@
   animation: blink 1s step-end infinite;
 }
 
-/* Custom Glows */
-.glow-blue { box-shadow: 0 0 15px rgba(59, 130, 246, 0.3); }
-.glow-indigo { box-shadow: 0 0 15px rgba(99, 102, 241, 0.3); }
+/* Impeccable Custom Glows */
+.glow-amber { box-shadow: 0 0 20px rgba(204, 136, 0, 0.35); }
+.glow-orange { box-shadow: 0 0 20px rgba(197, 82, 33, 0.35); }
 
-/* Glassmorphism Styles */
+/* Glassmorphism & Poster Panels */
 .glass-panel {
-  background: rgba(15, 23, 42, 0.45);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(17, 24, 39, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -83,9 +87,9 @@
 }
 
 .glass-panel-hover:hover {
-  background: rgba(15, 23, 42, 0.65);
-  border-color: rgba(6, 182, 212, 0.3);
-  box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.15);
+  background: rgba(17, 24, 39, 0.85);
+  border-color: rgba(204, 136, 0, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(204, 136, 0, 0.25);
   transform: translateY(-4px);
 }
 
@@ -126,3 +130,4 @@
   transform: scale(1);
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
