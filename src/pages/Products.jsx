@@ -189,13 +189,22 @@ export default function Products() {
               {/* CTAs */}
               <div className="flex items-center gap-3 flex-wrap pt-4 border-t border-white/10">
                 <a
+                  href="https://cipherly.nexusec.space"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="px-6 py-3 text-xs font-bold font-display uppercase tracking-wider text-white bg-gradient-to-r from-impeccable-amber via-amber-500 to-impeccable-orange rounded-xl shadow-impeccable hover:shadow-[0_0_25px_rgba(204,136,0,0.5)] hover:-translate-y-0.5 transition-all flex items-center gap-2"
+                >
+                  <span>Visit Site</span>
+                  <i className="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+                <a
                   href="https://github.com/orientis-digital/Cipherly"
                   target="_blank"
                   rel="noreferrer"
-                  className="px-6 py-3 text-xs font-bold font-display uppercase tracking-wider text-white bg-gradient-to-r from-impeccable-orange via-amber-500 to-impeccable-amber rounded-xl shadow-impeccable hover:shadow-[0_0_25px_rgba(204,136,0,0.5)] hover:-translate-y-0.5 transition-all flex items-center gap-2"
+                  className="px-5 py-3 text-xs font-bold font-display uppercase tracking-wider text-white border border-white/20 bg-tech-black/60 rounded-xl hover:border-impeccable-amber hover:bg-white/5 transition-all flex items-center gap-2"
                 >
                   <i className="fa-brands fa-github text-sm"></i>
-                  <span>Source Code</span>
+                  Source Code
                 </a>
               </div>
             </div>
