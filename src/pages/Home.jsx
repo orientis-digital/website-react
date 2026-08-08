@@ -17,8 +17,8 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-tech-black via-transparent to-tech-black"></div>
         </div>
 
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-impeccable-amber/15 rounded-full blur-[140px] pointer-events-none animate-[pulse_6s_ease-in-out_infinite]"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-impeccable-orange/15 rounded-full blur-[140px] pointer-events-none"></div>
+        <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-impeccable-amber/15 rounded-full blur-[80px] pointer-events-none transform-gpu"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-impeccable-orange/15 rounded-full blur-[80px] pointer-events-none transform-gpu"></div>
 
         <div className="container mx-auto px-[5%] max-w-[950px] z-10 text-center fade-up">
           <h1 className="text-[clamp(2.5rem,6vw,5.2rem)] font-display font-extrabold tracking-tight leading-[1.08] mb-6 text-white uppercase">
@@ -290,7 +290,7 @@ export default function Home() {
 
       {/* 6. High-Conversion Lead Magnet Call To Action */}
       <section className="py-28 bg-tech-black relative overflow-hidden border-t border-impeccable-amber/10">
-        <div className="absolute top-1/2 left-1/2 w-[800px] h-[400px] bg-impeccable-orange/15 -translate-x-1/2 -translate-y-1/2 blur-[120px] -z-10 animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/2 w-[600px] h-[350px] bg-impeccable-orange/15 -translate-x-1/2 -translate-y-1/2 blur-[80px] -z-10 transform-gpu"></div>
 
         <div className="container mx-auto px-[5%] max-w-[950px]">
           <div className="text-center glass-panel p-10 md:p-16 rounded-3xl border border-impeccable-amber/30 relative shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
